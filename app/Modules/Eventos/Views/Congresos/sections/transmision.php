@@ -1,12 +1,24 @@
 <body>
 
     <main>
-
-        <h1>8vo Congreso de Seguridad Pública</h1>
-
-        <section>
+        <section class="transmision">
             <h2>Transmisiones</h2>
-            <p>Bloque de videos de youtube, animaciones</p>
+            <div>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/zWzrdmFpmVQ" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <br>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/zWzrdmFpmVQ" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
         </section>
 
     </main>

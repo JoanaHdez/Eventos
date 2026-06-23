@@ -2,11 +2,32 @@
 
     <main>
 
-        <h1>8vo Congreso de Seguridad Pública</h1>
+        <section class="voces-globales">
+            <div class="vg-grid">
 
-        <section>
-            <h2>Voces Globales</h2>
-            <p>Bloque de pdf (ponentes-programa), animaciones</p>
+                <!-- IZQUIERDA -->
+                <div class="vg-left">
+                    <img src="<?= base_url('assets/img/hero15.png') ?>" alt="Logo">
+                </div>
+
+                <!-- DERECHA -->
+                <div class="vg-right">
+
+                    <div class="vg-texto">
+                        <h2>Voces Globales</h2>
+                        <p>
+                            Aquí va tu texto descriptivo. Puede ser un resumen del congreso,
+                            participación internacional, invitados, etc.
+                        </p>
+                    </div>
+
+                    <div class="vg-imagen">
+                        <img src="<?= base_url('assets/img/hero16.png') ?>" alt="Participación global">
+                    </div>
+
+                </div>
+
+                </div>
         </section>
 
 

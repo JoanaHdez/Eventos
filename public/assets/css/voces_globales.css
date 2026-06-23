@@ -1,0 +1,44 @@
+.vg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Imagen izquierda */
+.vg-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Columna derecha */
+.vg-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Texto */
+.vg-texto h2 {
+    margin-bottom: 10px;
+}
+
+.vg-texto p {
+    line-height: 1.6;
+}
+
+/* Imagen inferior derecha */
+.vg-imagen img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .vg-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -2,12 +2,37 @@
 
     <main>
 
-        <h1>8vo Congreso de Seguridad Pública</h1>
+        <section class="ponentes">
 
-        <section>
-            <h2>Ponentes</h2>
-            <p>Bloque de ponentes, animaciones</p>
-        </section>
+    <div class="ponentes-bg">
+
+        <h2>Ponentes</h2>
+
+        <div class="ponentes-grid">
+
+            <div class="ponente ponente-top">
+                <img src="<?= base_url('assets/img/hero13.jpg') ?>" alt="Logo">
+                <h3>Nombre Ponente</h3>
+                <p>Cargo o especialidad</p>
+            </div>
+
+            <div class="ponente ponente-bottom">
+                <img src="<?= base_url('assets/img/hero12.jpg') ?>" alt="Logo">
+                <h3>Nombre Ponente</h3>
+                <p>Cargo o especialidad</p>
+            </div>
+
+            <div class="ponente ponente-top">
+                <img src="<?= base_url('assets/img/hero14.png') ?>" alt="Logo">
+                <h3>Nombre Ponente</h3>
+                <p>Cargo o especialidad</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
     </main>
 
