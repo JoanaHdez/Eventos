@@ -1,29 +1,64 @@
+@font-face {
+  font-family: "Exo 2";
+  src: url("../fonts/Exo2-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("../fonts/Exo2-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("../fonts/Exo2-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section,
+footer {
+  scroll-margin-top: 120px;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+}
+
 .transmision {
-    padding: 60px 0;
-    text-align: center;
+    padding: 80px 0;
     overflow: hidden;
+    text-align: center;
 }
 
 .transmision-container {
     width: 640px;
-    margin: 0 auto;
+    margin: 40px auto 0;
     overflow: visible;
 }
 
 .transmision-slider {
     display: flex;
     gap: 45px;
-    transform: translateX(0);
+    transition: transform .8s ease;
 }
 
 .video-card {
     width: 640px;
     flex: 0 0 640px;
+    transition: transform .8s ease, opacity .8s ease;
 }
 
 .video-card:not(.active) {
     transform: scale(.92);
-    opacity: .95;
+    opacity: .75;
 }
 
 .video-wrapper {
@@ -45,4 +80,24 @@
     margin-top: 20px;
     font-size: 2rem;
     font-weight: 800;
+}
+
+.transmision-dots {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.transmision-dots .dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: none;
+    background: #bbb;
+    cursor: pointer;
+}
+
+.transmision-dots .dot.active {
+    background: #a11d3a;
 }
