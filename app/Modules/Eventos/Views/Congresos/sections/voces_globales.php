@@ -6,34 +6,40 @@
             <div class="container">
 
                 <div class="vg-grid">
-    
-                    <!-- IZQUIERDA -->
+
                     <div class="vg-left">
-                        <img src="<?= base_url('assets/img/hero15.png') ?>" alt="Logo">
+                        <img src="<?= base_url('assets/img/hero15.png') ?>" alt="Ponentes">
                     </div>
-    
-                    <!-- DERECHA -->
+
                     <div class="vg-right">
-    
+
                         <div class="vg-texto">
-                            <h2>Voces Globales</h2>
+                            <h2>Voces Globale</h2>
                             <p>
-                                "Más de 40 líderes de opinión, investigadores de prestigio internacional y operadores del
-                                sistema de justicia reunidos en un solo lugar para aportar ciencia, datos y experiencia en
-                                la transformación de la seguridad ciudadana."
+                                "Más de 40 líderes de opinión, investigadores de prestigio internacional y
+                                operadores del sistema de justicia reunidos en un solo lugar para aportar
+                                ciencia, datos y experiencia en la transformación de la seguridad ciudadana."
                             </p>
+
+                            <a href="#" class="btn-descargar">
+                                Descargar
+                                <span>↓</span>
+                            </a>
                         </div>
-    
-                        <div class="vg-imagen">
-                            <img src="<?= base_url('assets/img/hero16.png') ?>" alt="Participación global">
+
+                        <div class="vg-programa">
+                            <div class="programa-link">
+                                <span>Programa</span>
+                            </div>
+                            <img src="<?= base_url('assets/img/hero16.png') ?>" alt="Programa">
                         </div>
-    
+
                     </div>
-    
+
                 </div>
+
             </div>
         </section>
-
 
     </main>
 

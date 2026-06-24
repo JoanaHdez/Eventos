@@ -1,0 +1,42 @@
+.footer {
+    background: rgba(70, 70, 70, .9);
+    padding: 15px 0;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+.footer-contacto p {
+    margin: 2px 0;
+    font-size: 1rem;
+}
+
+.footer-titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer hr {
+    width: 80%;
+    margin: 15px auto;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,.5);
+}
+
+.footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer-redes img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    cursor: pointer;
+}

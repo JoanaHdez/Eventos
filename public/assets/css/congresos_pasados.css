@@ -1,79 +1,90 @@
 .congresos-anteriores {
-    padding: 60px 0;
+    position: relative;
+    background: url("../img/hero10.jpeg") no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 80px 0;
+    overflow: hidden;
 }
 
-.ca-grid {
+.congresos-anteriores::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    background: rgba(0,0,0,.25);
+}
+
+.congresos-anteriores .container {
+    position: relative;
+    z-index: 2;
+}
+
+.ca-slider {
+    height: 650px;
+    overflow: visible; /* antes hidden */
+    position: relative;
+}
+
+.ca-track {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    transform: translateY(-100px);
+}
+
+.ca-slide {
+    height: 260px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: 40% 10% 50%;
     align-items: center;
 }
 
-/* IZQUIERDA */
+.ca-info {
+    max-width: 380px;
+    color: white;
+}
+
 .ca-info h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 25px;
 }
 
 .ca-info p {
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.5;
     margin-bottom: 25px;
 }
 
 .ca-btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #111;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-}
-
-/* DERECHA CARRUSEL */
-.ca-carousel {
-    height: 350px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 12px;
-}
-
-.ca-carousel:hover .carousel-track {
-    animation-play-state: paused;
-}
-
-.carousel-track {
     display: flex;
-    flex-direction: column;
-    animation: scrollVertical 12s linear infinite;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    padding: 8px 14px;
+    background: linear-gradient(90deg, #1a00b8, #8fa5ff);
+    color: white;
+    text-decoration: none;
 }
 
-.carousel-track img {
+.ca-image {
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.ca-image img {
     width: 100%;
-    height: 350px;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-/* ANIMACIÓN VERTICAL */
-@keyframes scrollVertical {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-50%);
-    }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .ca-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .ca-carousel {
-        height: 250px;
-    }
-
-    .carousel-track img {
-        height: 250px;
-    }
+.ca-num {
+    color: #1a16b8;
+    font-size: 5rem;
+    font-weight: 900;
+    text-shadow: 3px 3px 0 white;
+    z-index: 5;
 }

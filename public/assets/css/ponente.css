@@ -1,67 +1,95 @@
 .ponentes {
-    padding: 100px 0;
-    background: url('../img/hero11.jpeg') no-repeat center center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  padding: 70px 0;
+  background: url("../img/patron-fondo.png") repeat;
 }
 
 .ponentes-bg {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.ponentes-fondo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ponentes-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(153, 153, 153, 0.45);
 }
 
 .ponentes h2 {
-    text-align: center;
-    margin-bottom: 60px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-top: 80px; /* baja el título */
+  margin-bottom: 10px;
 }
 
 .ponentes-grid {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 90px;
 }
 
 .ponente {
-    text-align: center;
-    max-width: 280px;
+  text-align: center;
+  width: 280px;
 }
 
 .ponente img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 20px;
-    margin-bottom: 15px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 22px;
+  margin-bottom: 12px;
 }
 
 .ponente h3 {
-    margin-bottom: 5px;
+  color: #ffd900;
+  font-size: 0.9rem;
+  font-weight: 850;
+  margin-bottom: 4px;
 }
 
 .ponente p {
-    opacity: .8;
-}
-
-.ponente-top {
-    margin-top: 0;
+  color: #ffd900;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .ponente-bottom {
-    margin-top: 80px;
+  margin-top: 120px;
+}
+
+.ponente-descripcion {
+  max-width: 760px;
+  margin: 35px auto 0;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
+  .ponentes-bg {
+    padding: 40px 20px;
+  }
 
-    .ponentes-grid {
-        flex-direction: column;
-        align-items: center;
-    }
+  .ponentes-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 
-    .ponente-bottom {
-        margin-top: 0;
-    }
-
+  .ponente-bottom {
+    margin-top: 0;
+  }
 }

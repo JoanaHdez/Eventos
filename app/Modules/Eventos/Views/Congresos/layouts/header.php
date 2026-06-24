@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/voces_globales.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/congresos_pasados.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/ponente.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/footer.css') ?>">
 </head>
 
 </html>
