@@ -1,8 +1,41 @@
+@font-face {
+  font-family: "Exo 2";
+  src: url("../fonts/Exo2-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("../fonts/Exo2-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("../fonts/Exo2-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section,
+footer {
+  scroll-margin-top: 120px;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+}
+
 #hero {
-    position: relative;
-    background: url("../img/hero1.jpeg") no-repeat center center;
-    background-size: cover;
-    min-height: 100vh;
+  position: relative;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .hero_banderas {
@@ -32,6 +65,10 @@
 .hero_8vo img {
   height: 100%;
   max-width: 30%;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1))
+    drop-shadow(0 0 40px rgba(255, 255, 255, 1))
+    drop-shadow(0 0 60px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 80px rgba(255, 255, 255, 0.9));
 }
 
 .hero_texto {
@@ -40,10 +77,21 @@
 }
 
 .hero_texto h1 {
+  font-family: "Exo 2", sans-serif;
   font-size: 3rem;
   color: white;
   font-weight: bold;
   text-align: center;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.hero-menu a,
+.hero_boton .btn {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
 }
 
 .hero_boton {
@@ -57,7 +105,38 @@
 .hero_boton .btn {
   max-width: 450px;
   width: 80%;
-  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 18px;
+
+  background: #a11d3a !important;
+  color: white !important;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+  text-decoration: none;
+  border-radius: 14px;
+
+  font-weight: 600;
+}
+
+.hero_boton .btn:hover {
+  background: #7c142b !important;
+  color: white !important;
+  transform: scale(1.03);
+}
+
+.hero_boton .btn img {
+  width: 34px;
+  height: 34px;
+}
+
+.hero_boton .btn span {
+  text-align: left;
+  flex: 1;
 }
 
 .btn {
@@ -67,6 +146,28 @@
   color: white;
   display: inline-block;
   background: #a11d3a;
+}
+
+.hero_boton .btn,
+.hero_boton .btn:hover,
+.hero_boton .btn:focus,
+.hero_boton .btn:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.hero_boton .btn-primary {
+  --bs-btn-bg: #a11d3a;
+  --bs-btn-border-color: #a11d3a;
+
+  --bs-btn-hover-bg: #a11d3a;
+  --bs-btn-hover-border-color: #a11d3a;
+
+  --bs-btn-active-bg: #a11d3a;
+  --bs-btn-active-border-color: #a11d3a;
+
+  --bs-btn-focus-shadow-rgb: 0, 0, 0;
 }
 
 .hero-imagenes {
@@ -112,27 +213,34 @@
 }
 
 .hero-menu {
-    position: absolute;
-    top: 91%; /* ajusta según necesites */
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  top: 91%; /* ajusta según necesites */
+  left: 50%;
+  transform: translateX(-50%);
 
-    background: #a11d3a;
-    border-radius: 50px;
-    padding: 22px 200px;
+  background: #a11d3a;
+  border-radius: 50px;
+  padding: 22px 200px;
 
-    display: flex;
-    gap: 100px;
-    z-index: 100;
+  display: flex;
+  gap: 100px;
+  z-index: 100;
 }
 
 .hero-menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    white-space: nowrap;
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  white-space: nowrap;
 }
 
+#hero {
+  transition: background-image 0.8s ease-in-out;
+}
+
+.hero-imagenes img {
+  transition: all 0.8s ease-in-out;
+}
 
 @media (max-width: 768px) {
   .hero_contenido {
