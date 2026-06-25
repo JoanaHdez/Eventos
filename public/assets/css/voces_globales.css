@@ -1,3 +1,37 @@
+@font-face {
+  font-family: "Exo 2";
+  src: url("../fonts/Exo2-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("../fonts/Exo2-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("../fonts/Exo2-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section,
+footer {
+  scroll-margin-top: 120px;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+}
+
 .voces-globales {
     padding: 60px 0;
 }
@@ -85,6 +119,38 @@
     align-items: center;
     justify-content: center;
 }
+
+.vg-left img,
+.vg-texto,
+.vg-programa img {
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.vg-fade {
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.vg-dots {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.vg-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: none;
+    background: #bbb;
+    cursor: pointer;
+}
+
+.vg-dot.active {
+    background: #a11d3a;
+}
+
 
 @media (max-width: 768px) {
     .vg-grid {
