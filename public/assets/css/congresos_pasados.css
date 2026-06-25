@@ -1,90 +1,176 @@
 .congresos-anteriores {
-    position: relative;
-    background: url("../img/hero10.jpeg") no-repeat center center;
-    background-size: cover;
-    min-height: 100vh;
-    padding: 80px 0;
-    overflow: hidden;
+  position: relative;
+  background: url("../img/hero10.jpeg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .congresos-anteriores::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(6px);
-    background: rgba(0,0,0,.25);
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .congresos-anteriores .container {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
 }
 
-.ca-slider {
-    height: 650px;
-    overflow: visible; /* antes hidden */
-    position: relative;
-}
-
-.ca-track {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    transform: translateY(-100px);
-}
-
-.ca-slide {
-    height: 260px;
-    display: grid;
-    grid-template-columns: 40% 10% 50%;
-    align-items: center;
+.ca-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  align-items: center;
 }
 
 .ca-info {
-    max-width: 380px;
-    color: white;
+  max-width: 380px;
+  color: white;
 }
 
 .ca-info h2 {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 25px;
 }
 
 .ca-info p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
 }
 
 .ca-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 320px;
-    padding: 8px 14px;
-    background: linear-gradient(90deg, #1a00b8, #8fa5ff);
-    color: white;
-    text-decoration: none;
+  width: 320px;
+  padding: 8px 14px;
+  background: linear-gradient(90deg, #1a00b8, #8fa5ff);
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
 }
 
-.ca-image {
-    width: 800px;
-    height: 500px;
-    overflow: hidden;
+.ca-carousel {
+  height: 870px;
+  overflow: hidden;
+  position: relative;
+  margin-left: 150px; /* menos margen para que se vean los números */
 }
 
-.ca-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.ca-track {
+  position: relative;
+  height: 100%;
 }
 
-.ca-num {
-    color: #1a16b8;
-    font-size: 5rem;
-    font-weight: 900;
-    text-shadow: 3px 3px 0 white;
-    z-index: 5;
+.ca-item {
+  position: absolute;
+  left: 150px; /* mueve la imagen a la derecha */
+  width: 1000px; /* más larga */
+  height: 280px; /* más panorámica */
+  transition: all 0.8s ease;
+}
+
+.ca-item {
+  opacity: 0;
+}
+
+.ca-item.is-top,
+.ca-item.is-center,
+.ca-item.is-bottom {
+  opacity: 1;
+}
+
+.ca-item.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-900px);
+  z-index: 0;
+}
+
+.ca-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ca-item .ca-num {
+  position: absolute;
+  left: -110px; /* número visible junto a la imagen */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1a16b8;
+  font-size: 7rem;
+  font-weight: 900;
+  text-shadow: 4px 4px 0 white;
+  z-index: 50;
+}
+
+.ca-item.is-top {
+  top: -70px;
+  opacity: 1;
+}
+
+.ca-item.is-center {
+  top: 260px;
+  z-index: 5;
+}
+
+.ca-item.is-bottom {
+  top: 590px;
+  opacity: 1;
+}
+
+.ca-info.fade {
+  opacity: 0;
+}
+
+.ca-info {
+  transition: opacity 0.4s ease;
+}
+
+.ca-control {
+  position: absolute;
+  left: 80px;
+  z-index: 20;
+
+  width: 62px;
+  height: 62px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+
+  color: #fff;
+  font-size: 1.7rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.35s;
+}
+
+.ca-control:hover {
+  background: #a11d3a;
+  transform: scale(1.08);
+}
+
+.ca-up {
+  top: 60px;
+}
+
+.ca-down {
+  bottom: 60px;
+}
+
+.congresos-anteriores {
+  transition: background-image 0.8s ease-in-out;
 }
