@@ -1,68 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".vg-slide");
-    const dots = document.querySelectorAll(".vg-dot");
+  const slides = document.querySelectorAll(".vg-view");
+  const dots = document.querySelectorAll(".vg-dot");
+  const modal = document.getElementById("vg-modal");
+  const modalImage = document.getElementById("vg-modal-image");
+  const modalDownload = document.getElementById("vg-modal-download");
+  const modalClose = document.querySelector(".vg-modal-close");
 
-    const imgLeft = document.getElementById("vg-left-img");
-    const imgPrograma = document.getElementById("vg-programa-img");
-    const titulo = document.getElementById("vg-titulo");
-    const texto = document.getElementById("vg-texto");
-    const descargar = document.getElementById("vg-descargar");
+  document.querySelectorAll(".vg-modal-img").forEach((img) => {
+    img.addEventListener("click", () => {
+      modalImage.src = img.src;
+      modalDownload.href = img.dataset.pdf;
+      modal.classList.add("active");
+    });
+  });
 
-    if (!slides.length) return;
+  modalClose.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
 
-    let activeIndex = 0;
-
-    function cambiarSlide(index) {
-        const slide = slides[index];
-
-        imgLeft.classList.add("vg-fade");
-        imgPrograma.classList.add("vg-fade");
-        titulo.classList.add("vg-fade");
-        texto.classList.add("vg-fade");
-
-        setTimeout(() => {
-            imgLeft.src = slide.dataset.left;
-            imgPrograma.src = slide.dataset.programa;
-            titulo.textContent = slide.dataset.titulo;
-            texto.textContent = slide.dataset.texto;
-
-            descargar.href = slide.dataset.descarga;
-
-            slides.forEach((s, i) => s.classList.toggle("active", i === index));
-            dots.forEach((d, i) => d.classList.toggle("active", i === index));
-
-            imgLeft.classList.remove("vg-fade");
-            imgPrograma.classList.remove("vg-fade");
-            titulo.classList.remove("vg-fade");
-            texto.classList.remove("vg-fade");
-        }, 300);
-
-        activeIndex = index;
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
     }
+  });
 
-    descargar.addEventListener("click", (e) => {
-        e.preventDefault();
+  if (!slides.length) return;
 
-        const slide = slides[activeIndex];
+  let activeIndex = 0;
 
-        const link = document.createElement("a");
-        link.href = slide.dataset.descarga;
-        link.download = "";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+  function cambiarSlide(index) {
+    if (!slides[index]) return;
+
+    activeIndex = index;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
     });
 
-    dots.forEach(dot => {
-        dot.addEventListener("click", () => {
-            cambiarSlide(Number(dot.dataset.index));
-        });
+    dots.forEach((dot) => {
+      dot.classList.toggle("active", Number(dot.dataset.index) === index);
     });
+  }
 
-    setInterval(() => {
-        const siguiente = activeIndex === slides.length - 1 ? 0 : activeIndex + 1;
-        cambiarSlide(siguiente);
-    }, 4000);
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      cambiarSlide(Number(dot.dataset.index));
+    });
+  });
 
-    cambiarSlide(0);
+  setInterval(() => {
+    const siguiente = activeIndex === slides.length - 1 ? 0 : activeIndex + 1;
+    cambiarSlide(siguiente);
+  }, 4000);
+
+  cambiarSlide(0);
 });
