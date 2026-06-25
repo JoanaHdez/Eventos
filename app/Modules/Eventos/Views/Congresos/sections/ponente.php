@@ -1,8 +1,4 @@
-<body>
-
-    <main>
-
-        <section id="ponentes" class="ponentes">
+<section id="ponentes" class="ponentes">
             <div class="ponentes-bg">
                 <img class="ponentes-fondo" src="<?= base_url('assets/img/hero11.jpeg') ?>" alt="">
 
@@ -48,8 +44,4 @@
             </div>
         </section>
 
-    </main>
-    <script src="<?= base_url('assets/js/ponentes.js') ?>"></script>
-</body>
-
-</html>
+<script src="<?= base_url('assets/js/ponentes.js') ?>"></script>

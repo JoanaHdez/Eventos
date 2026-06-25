@@ -1,8 +1,4 @@
-<body>
-
-    <main>
-
-        <section id="programa" class="voces-globales">
+<section id="programa" class="voces-globales">
             <div class="container">
 
                 <div class="vg-slider">
@@ -98,9 +94,6 @@
             </div>
         </section>
 
-    </main>
-    </main>
-
     <div class="vg-modal" id="vg-modal">
 
         <div class="vg-modal-content">
@@ -119,7 +112,4 @@
         </div>
 
     </div>
-    <script src="<?= base_url('assets/js/voces_globales.js') ?>"></script>
-</body>
-
-</html>
+<script src="<?= base_url('assets/js/voces_globales.js') ?>"></script>

@@ -1,21 +1,17 @@
-<body>
-    <?= view('App\Modules\Eventos\Views\Congresos\layouts\header') ?>
+<?= view('App\Modules\Eventos\Views\Congresos\layouts\header') ?>
 
-    <main>
+<main>
 
-        <?= view('App\Modules\Eventos\Views\Congresos\sections\hero') ?>
+    <?= view('App\Modules\Eventos\Views\Congresos\sections\hero') ?>
 
-        <?= view('App\Modules\Eventos\Views\Congresos\sections\transmision') ?>
+    <?= view('App\Modules\Eventos\Views\Congresos\sections\transmision') ?>
 
-        <?= view('App\Modules\Eventos\Views\Congresos\sections\voces_globales') ?>
+    <?= view('App\Modules\Eventos\Views\Congresos\sections\voces_globales') ?>
 
-        <?= view('App\Modules\Eventos\Views\Congresos\sections\congresos_pasados') ?>
+    <?= view('App\Modules\Eventos\Views\Congresos\sections\congresos_pasados') ?>
 
-        <?= view('App\Modules\Eventos\Views\Congresos\sections\ponente') ?>
+    <?= view('App\Modules\Eventos\Views\Congresos\sections\ponente') ?>
 
-    </main>
+</main>
 
-    <?= view('App\Modules\Eventos\Views\Congresos\layouts\footer') ?>
-</body>
-
-</html>
+<?= view('App\Modules\Eventos\Views\Congresos\layouts\footer') ?>

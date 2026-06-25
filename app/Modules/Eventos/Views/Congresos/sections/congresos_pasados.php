@@ -1,8 +1,4 @@
-<body>
-
-    <main>
-
-        <section id="congresos" class="congresos-anteriores">
+<section id="congresos" class="congresos-anteriores">
             <div class="container">
 
                 <button class="ca-control ca-up" type="button">↑</button>
@@ -87,8 +83,4 @@
             </div>
         </section>
 
-    </main>
-    <script src="<?= base_url('assets/js/congresos_pasados.js') ?>"></script>
-</body>
-
-</html>
+<script src="<?= base_url('assets/js/congresos_pasados.js') ?>"></script>

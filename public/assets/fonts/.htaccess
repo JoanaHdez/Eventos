@@ -1,0 +1,11 @@
+<IfModule mod_mime.c>
+  AddType font/ttf .ttf
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|otf|woff|woff2)$">
+    Header set Access-Control-Allow-Origin "*"
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+  </FilesMatch>
+</IfModule>

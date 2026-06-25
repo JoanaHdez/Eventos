@@ -3,8 +3,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const hero = document.getElementById("hero");
     const titulo = document.querySelector(".hero_texto h1");
     const imagenes = document.querySelectorAll(".hero-imagenes img");
+    const menu = document.querySelector(".hero-menu");
+
+    let menuStickyStart = 0;
 
     let posiciones = ["img1", "img2", "img3", "img4", "img5"];
+
+    function calcularMenuSticky() {
+        if (!menu) return;
+
+        menu.classList.remove("is-fixed");
+        const rect = menu.getBoundingClientRect();
+        menuStickyStart = window.scrollY + rect.top - 20;
+        actualizarMenuSticky();
+    }
+
+    function actualizarMenuSticky() {
+        if (!menu) return;
+
+        menu.classList.toggle("is-fixed", window.scrollY >= menuStickyStart);
+    }
 
     function actualizarHero() {
 
@@ -21,6 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     actualizarHero();
+    calcularMenuSticky();
+
+    window.addEventListener("scroll", actualizarMenuSticky, { passive: true });
+    window.addEventListener("resize", calcularMenuSticky);
+    window.addEventListener("load", calcularMenuSticky);
 
     setInterval(() => {
 

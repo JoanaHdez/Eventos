@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Exo 2";
+  src:
+    local("Exo 2 Regular"),
+    local("Exo2-Regular"),
+    url("../fonts/Exo2-Regular.ttf?v=20260625-3") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src:
+    local("Exo 2 SemiBold"),
+    local("Exo2-SemiBold"),
+    url("../fonts/Exo2-SemiBold.ttf?v=20260625-3") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src:
+    local("Exo 2 Bold"),
+    local("Exo2-Bold"),
+    url("../fonts/Exo2-Bold.ttf?v=20260625-3") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --site-font-family: "Exo 2", "Segoe UI", Arial, sans-serif;
+  --bs-body-font-family: var(--site-font-family);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+body *,
+body *::before,
+body *::after {
+  font-family: var(--site-font-family) !important;
+}
+
+section,
+footer {
+  scroll-margin-top: 120px;
+}

@@ -1,8 +1,4 @@
-<body>
-
-    <main>
-
-        <section id="transmisiones" class="transmision">
+<section id="transmisiones" class="transmision">
 
             <div class="container-fluid px-5">
 
@@ -14,7 +10,12 @@
 
                         <div class="video-card active">
                             <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/zWzrdmFpmVQ" allowfullscreen></iframe>
+                                <iframe
+                                    src="https://www.youtube.com/embed/zWzrdmFpmVQ?start=1"
+                                    title="Transmisi&oacute;n 28 de agosto de 2025"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen></iframe>
                             </div>
 
                             <h3 class="video-titulo">28 de agosto de 2025</h3>
@@ -22,7 +23,12 @@
 
                         <div class="video-card">
                             <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/VIDEO2" allowfullscreen></iframe>
+                                <iframe
+                                    src="https://www.youtube.com/embed/7OL-1b166d4?start=1"
+                                    title="Transmisi&oacute;n 29 de agosto de 2025"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen></iframe>
                             </div>
 
                             <h3 class="video-titulo">29 de agosto de 2025</h3>
@@ -41,8 +47,4 @@
 
         </section>
 
-    </main>
-    <script src="<?= base_url('assets/js/transmision.js') ?>"></script>
-</body>
-
-</html>
+<script src="<?= base_url('assets/js/transmision.js') ?>"></script>
