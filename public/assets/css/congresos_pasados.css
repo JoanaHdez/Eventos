@@ -174,3 +174,143 @@
 .congresos-anteriores {
   transition: background-image 0.8s ease-in-out;
 }
+
+.mobile-arrow {
+  display: none;
+}
+
+.ca-control .mobile-arrow {
+  display: none !important;
+}
+
+.ca-control .desktop-arrow {
+  display: inline !important;
+}
+
+@media (max-width: 768px) {
+  .ca-control .desktop-arrow {
+    display: none !important;
+  }
+
+  .ca-control .mobile-arrow {
+    display: inline !important;
+  }
+
+  .congresos-anteriores .container {
+    min-height: 100vh;
+  }
+
+  .ca-layout {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 90px 20px 60px;
+  }
+
+  .ca-carousel {
+    order: 1;
+    width: 100%;
+    height: 360px;
+    margin-left: 0;
+    overflow: hidden;
+  }
+
+  .ca-track {
+    height: 100%;
+    position: relative;
+  }
+
+  .ca-item {
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+
+    width: 78%;
+    height: 230px;
+
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.75);
+    transition: all 0.8s ease;
+  }
+
+  .ca-item.is-top {
+    opacity: 0.55;
+    transform: translate(-120%, -50%) scale(0.75);
+    z-index: 2;
+  }
+
+  .ca-item.is-center {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 5;
+  }
+
+  .ca-item.is-bottom {
+    opacity: 0.55;
+    transform: translate(20%, -50%) scale(0.75);
+    z-index: 2;
+  }
+
+  .ca-item.is-hidden {
+    opacity: 0;
+    transform: translate(120%, -50%) scale(0.65);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .ca-item img {
+    border-radius: 14px;
+  }
+
+  .ca-item .ca-num {
+    left: 50%;
+    top: -70px;
+    transform: translateX(-50%);
+    font-size: 4.5rem;
+  }
+
+  .ca-info {
+    order: 2;
+    max-width: 90%;
+    margin: 25px auto 0;
+    text-align: center;
+  }
+
+  .ca-info h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
+  .ca-info p {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .ca-btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .ca-control {
+  top: 270px; /* ajusta este valor */
+  bottom: auto;
+
+  width: 48px;
+  height: 48px;
+  font-size: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .ca-up {
+    left: 18px;
+  }
+
+  .ca-down {
+    right: 18px;
+    left: auto;
+  }
+}
