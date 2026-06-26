@@ -189,6 +189,9 @@
 
 @media (max-width: 768px) {
 
+.congresos-anteriores {
+    margin-top: 40px;
+}
 
   .ca-control .desktop-arrow {
     display: none !important;

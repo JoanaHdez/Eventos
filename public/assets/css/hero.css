@@ -247,7 +247,6 @@
 }
 
 @media (max-width: 768px) {
-
   .hero-menu-toggle {
     display: flex !important;
     position: fixed;
@@ -339,10 +338,10 @@
     text-align: center;
     align-items: center;
   }
-  #hero{
+  #hero {
     background-size: 170%;
     background-position: center top;
-}
+  }
 
   .hero_texto h1 {
     font-size: 2rem;
@@ -354,13 +353,13 @@
     justify-content: center;
     align-items: center;
     margin-top: 35px;
-}
+  }
 
-.hero_8vo img{
+  .hero_8vo img {
     width: 100%;
     max-width: 320px;
     height: auto;
-}
+  }
 
   .hero_texto {
     margin-top: 30px;
@@ -421,5 +420,114 @@
     z-index: 1;
     transform: translate(-50%, -50%) scale(0.68);
     opacity: 0.25;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero {
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: hidden;
+  }
+
+  .hero_banderas img {
+    max-height: 48px;
+    object-fit: cover;
+  }
+
+  .hero-menu-toggle {
+    top: 58px;
+    left: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.6rem;
+  }
+
+  .hero-menu {
+    top: 110px !important;
+    left: 16px !important;
+    width: 72vw;
+    min-width: 240px;
+    max-width: 300px;
+    padding: 14px;
+    gap: 8px;
+  }
+
+  .hero-menu a {
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .hero-menu a img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero_8vo {
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero_8vo img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .hero_texto {
+    width: 100%;
+    max-width: 100%;
+    margin: 35px auto 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero_texto h1 {
+    width: 90%;
+    max-width: 340px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .hero-imagenes {
+    height: 260px;
+    margin-top: 55px;
+    overflow: hidden;
+  }
+
+  .hero-imagenes img {
+    width: 82%;
+    top: 48% !important;
+    left: 50% !important;
+  }
+
+  .hero-imagenes .img1 {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .hero-imagenes .img2 {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  .hero-imagenes .img3 {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  .hero-imagenes .img4 {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+
+  .hero-imagenes .img5 {
+    transform: translate(-50%, -50%) scale(0.6);
   }
 }
