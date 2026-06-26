@@ -242,7 +242,12 @@
   display: none !important;
 }
 
+.hero-menu a img {
+  display: none;
+}
+
 @media (max-width: 768px) {
+
   .hero-menu-toggle {
     display: flex !important;
     position: fixed;
@@ -314,6 +319,7 @@
   }
 
   .hero-menu a img {
+    display: block;
     width: 28px;
     height: 28px;
     object-fit: contain;

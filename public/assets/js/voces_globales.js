@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalImage = document.getElementById("vg-modal-image");
   const modalDownload = document.getElementById("vg-modal-download");
   const modalClose = document.querySelector(".vg-modal-close");
+  const prev = document.querySelector(".vg-prev");
+const next = document.querySelector(".vg-next");
 
   document.querySelectorAll(".vg-modal-img").forEach((img) => {
     img.addEventListener("click", () => {
@@ -47,6 +49,20 @@ document.addEventListener("DOMContentLoaded", () => {
       cambiarSlide(Number(dot.dataset.index));
     });
   });
+
+  if (prev) {
+  prev.addEventListener("click", () => {
+    const anterior = activeIndex === 0 ? slides.length - 1 : activeIndex - 1;
+    cambiarSlide(anterior);
+  });
+}
+
+if (next) {
+  next.addEventListener("click", () => {
+    const siguiente = activeIndex === slides.length - 1 ? 0 : activeIndex + 1;
+    cambiarSlide(siguiente);
+  });
+}
 
   setInterval(() => {
     const siguiente = activeIndex === slides.length - 1 ? 0 : activeIndex + 1;
