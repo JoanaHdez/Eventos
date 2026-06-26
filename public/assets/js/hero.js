@@ -3,18 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const hero = document.getElementById("hero");
     const titulo = document.querySelector(".hero_texto h1");
     const imagenes = document.querySelectorAll(".hero-imagenes img");
+
     const menu = document.querySelector(".hero-menu");
+    const menuToggle = document.querySelector(".hero-menu-toggle");
 
     let menuStickyStart = 0;
-
     let posiciones = ["img1", "img2", "img3", "img4", "img5"];
 
     function calcularMenuSticky() {
         if (!menu) return;
 
         menu.classList.remove("is-fixed");
+
         const rect = menu.getBoundingClientRect();
         menuStickyStart = window.scrollY + rect.top - 20;
+
         actualizarMenuSticky();
     }
 
@@ -25,8 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function actualizarHero() {
-
         const imagenFrente = document.querySelector(".hero-imagenes .img1");
+
+        if (!imagenFrente || !hero || !titulo) return;
 
         hero.style.backgroundImage = `url('${imagenFrente.dataset.bg}')`;
 
@@ -38,6 +42,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 400);
     }
 
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+            menuToggle.textContent = menu.classList.contains("active") ? "×" : "☰";
+        });
+
+        menu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                menu.classList.remove("active");
+                menuToggle.textContent = "☰";
+            });
+        });
+    }
+
     actualizarHero();
     calcularMenuSticky();
 
@@ -46,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("load", calcularMenuSticky);
 
     setInterval(() => {
-
         const primera = posiciones.shift();
         posiciones.push(primera);
 
@@ -60,11 +77,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
 
 });
-
-const fondosHero = [
-    "<?= base_url('assets/img/hero1.jpeg') ?>",
-    "<?= base_url('assets/img/hero5.jpeg') ?>",
-    "<?= base_url('assets/img/hero4.jpeg') ?>",
-    "<?= base_url('assets/img/hero3.jpeg') ?>",
-    "<?= base_url('assets/img/hero2.jpeg') ?>"
-];
