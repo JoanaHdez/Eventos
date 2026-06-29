@@ -1,0 +1,131 @@
+.transmision {
+  padding: 80px 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.transmision-container {
+  width: 640px;
+  margin: 40px auto 0;
+  overflow: visible;
+}
+
+.transmision-slider {
+  display: flex;
+  gap: 45px;
+  transition: transform 0.8s ease;
+}
+
+.video-card {
+  width: 640px;
+  flex: 0 0 640px;
+  transition:
+    transform 0.8s ease,
+    opacity 0.8s ease;
+}
+
+.video-card:not(.active) {
+  transform: scale(0.92);
+  opacity: 0.75;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  border-radius: 16px;
+}
+
+.video-titulo {
+  margin-top: 20px;
+  font-family: "Exo 2", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.transmision-dots {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.transmision-dots .dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: none;
+  background: #bbb;
+  cursor: pointer;
+}
+
+.transmision-dots .dot.active {
+  background: #a11d3a;
+}
+
+@media (max-width: 480px) {
+  .transmision {
+    padding: 35px 0 45px;
+    margin-top: -150px;
+  }
+
+  .transmision .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .transmision h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .transmision-container {
+    width: 100%;
+    margin: 25px auto 0;
+    overflow: hidden;
+  }
+
+  .transmision-slider {
+    gap: 0;
+  }
+
+  .video-card {
+    width: 100%;
+    flex: 0 0 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .video-card:not(.active) {
+    transform: scale(0.95);
+    opacity: 0.65;
+  }
+
+  .video-wrapper iframe {
+    border-radius: 14px;
+  }
+
+  .video-titulo {
+    font-size: 0.95rem;
+    margin-top: 16px;
+  }
+
+  .transmision-dots {
+    margin-top: 18px;
+    justify-content: center;
+  }
+
+  .transmision-dots .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
