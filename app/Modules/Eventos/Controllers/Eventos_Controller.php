@@ -22,7 +22,65 @@ class Eventos_Controller extends BaseController
 
                 'logo_congreso' => 'assets/eventos/plantillas/informativa/img/logo-congreso.png',
                 'intro' => 'El Primer Congreso Internacional de Seguridad y Proximidad Social marcó el inicio de un espacio de encuentro entre especialistas nacionales e internacionales, servidores públicos, académicos, consultores y representantes de instituciones dedicadas a la seguridad pública.
-                Durante tres días, el Congreso promovió el intercambio de experiencias y perspectivas sobre los retos de la seguridad ciudadana, impulsando el modelo de proximidad social como una estrategia para fortalecer la confianza entre la ciudadanía y las instituciones de seguridad.',
+                 Durante tres días, el Congreso promovió el intercambio de experiencias y perspectivas sobre los retos de la seguridad ciudadana, impulsando el modelo de proximidad social como una estrategia para fortalecer la confianza entre la ciudadanía y las instituciones de seguridad.',
+
+                'video_principal' => 'https://www.youtube.com/embed/ID_DEL_VIDEO',
+
+                'video_titulo' => '1° Congreso Internacional de Seguridad y Proximidad Social',
+
+                'videos_secundarios' => [
+                    [
+                        'titulo' => '1° Congreso Internacional de Seguridad y Proximidad Social',
+                        'url' => 'https://www.youtube.com/embed/ID_DEL_VIDEO',
+                    ],
+                ],
+
+                'objetivo' => 'Lugar de encuentro en el que participan ponentes de diferentes países que comparten experiencias como servidores públicos, empresas privadas y consultores con diferentes perspectivas, a través de un espacio en común en materia de seguridad pública y proximidad social.',
+
+                'tematica_intro' => 'Esta primera edición estuvo enfocada en el análisis de:',
+
+                'tematicas' => [
+                    'Seguridad Pública.',
+                    'Proximidad Social.',
+                    'Prevención de la violencia.',
+                    'Convivencia ciudadana.',
+                    'Experiencias internacionales en seguridad.',
+                    'Modelos policiales orientados a la ciudadanía.',
+                ],
+
+                'personas_destacadas' => [
+                    [
+                        'nombre' => 'Presidente Municipal Juan Hugo de la Rosa',
+                        'cargo' => 'Mensaje de bienvenida',
+                        'imagen' => 'assets/eventos/plantillas/informativa/img/persona1.jpg',
+                    ],
+                    [
+                        'nombre' => 'Lic. José Jorge Amador Amador',
+                        'cargo' => 'Organización',
+                        'imagen' => 'assets/eventos/plantillas/informativa/img/persona2.jpg',
+                    ],
+                ],
+
+                'actividades' => [
+                    [
+                        'titulo' => 'Conferencias magistrales.',
+                        'descripcion' => 'Palabras de bienvenida a expositores e invitados además de convocar a ser partícipes en las conferencias. Con el propósito de difundir la problemática actual y las perspectivas para alcanzar soluciones viables en materia de seguridad y convivencia social.',
+                    ],
+                    [
+                        'titulo' => 'Mesas de debate.',
+                        'descripcion' => 'Espacios de diálogo entre especialistas para compartir experiencias, propuestas y perspectivas en materia de seguridad pública.',
+                    ],
+                    [
+                        'titulo' => 'Foros de discusión.',
+                        'descripcion' => 'Encuentros orientados al análisis de problemáticas actuales y posibles soluciones para fortalecer la proximidad social.',
+                    ],
+                    [
+                        'titulo' => 'Intercambio de experiencias internacionales.',
+                        'descripcion' => 'Participación de especialistas nacionales e internacionales para compartir modelos y buenas prácticas.',
+                    ],
+                ],
+
+                'actividad_imagen' => 'assets/eventos/plantillas/informativa/img/actividad1.jpg',
             ],
         ];
 
