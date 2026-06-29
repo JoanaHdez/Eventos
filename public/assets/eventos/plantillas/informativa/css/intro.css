@@ -1,0 +1,27 @@
+.intro-congreso {
+    background-image: url("../img/patron-fondo.png");
+    background-repeat: repeat;
+    background-size: 120px;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.intro-logo {
+    max-width: 330px;
+    width: 100%;
+}
+
+.intro-texto {
+    font-family: Georgia, serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    text-transform: uppercase;
+    margin: 0;
+    color: #111;
+}
+
+@media (max-width: 767px) {
+    .intro-texto {
+        text-align: center;
+        font-size: 0.85rem;
+    }
+}
