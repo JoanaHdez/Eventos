@@ -1,0 +1,44 @@
+.general-section {
+    background-image: url("../img/patron-fondo.png");
+    background-repeat: repeat;
+    background-size: 130px;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.general-card {
+    max-width: 680px;
+    background: #8b0000;
+    color: #fff;
+    border-radius: 18px;
+    padding: 1.5rem 2rem;
+    font-family: Georgia, serif;
+}
+
+.general-row {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 0.75rem 0;
+}
+
+.general-row:last-child {
+    border-bottom: none;
+}
+
+.general-label,
+.general-value {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media (max-width: 575px) {
+    .general-card {
+        padding: 1rem 1.2rem;
+    }
+
+    .general-row {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+    }
+}

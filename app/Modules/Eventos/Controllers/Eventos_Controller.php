@@ -81,6 +81,71 @@ class Eventos_Controller extends BaseController
                 ],
 
                 'actividad_imagen' => 'assets/eventos/plantillas/informativa/img/actividad1.jpg',
+
+                'galeria' => [
+                    [
+                        'src' => 'assets/eventos/plantillas/informativa/img/galeria1.jpg',
+                        'alt' => 'Stand de tiro',
+                        'grande' => true,
+                    ],
+                    [
+                        'src' => 'assets/eventos/plantillas/informativa/img/galeria2.jpg',
+                        'alt' => 'Escenario del congreso',
+                    ],
+                    [
+                        'src' => 'assets/eventos/plantillas/informativa/img/galeria3.jpg',
+                        'alt' => 'Participantes con programa',
+                    ],
+                    [
+                        'src' => 'assets/eventos/plantillas/informativa/img/galeria4.jpg',
+                        'alt' => 'Auditorio del congreso',
+                    ],
+                    [
+                        'src' => 'assets/eventos/plantillas/informativa/img/galeria5.jpg',
+                        'alt' => 'Ponente en escenario',
+                    ],
+                    [
+                        'src' => 'assets/eventos/plantillas/informativa/img/galeria6.jpg',
+                        'alt' => 'Entrega de reconocimientos',
+                        'grande' => true,
+                    ],
+                    [
+                        'src' => 'assets/eventos/plantillas/informativa/img/galeria7.jpg',
+                        'alt' => 'Inauguración',
+                    ],
+                ],
+
+                'programa_imagen' => 'assets/eventos/plantillas/informativa/img/programa1.jpg',
+                'ponentes_imagen' => 'assets/eventos/plantillas/informativa/img/ponentes1.jpg',
+
+                'legado' => 'El Primer Congreso Internacional de Seguridad y Proximidad Social representó el inicio de un proyecto institucional que, con el paso de los años, se consolidó como un espacio permanente para el intercambio de conocimientos, experiencias y buenas prácticas en materia de seguridad pública y proximidad social, contando con la participación de especialistas de México y diversos países.',
+
+                'informacion_general' => [
+    [
+        'label' => 'Edición',
+        'value' => '1°',
+    ],
+    [
+        'label' => 'Fecha',
+        'value' => '10 al 12 de mayo de 2017',
+    ],
+    [
+        'label' => 'Sede',
+        'value' => 'Nezahualcóyotl, Estado de México',
+    ],
+    [
+        'label' => 'Duración',
+        'value' => '3 días',
+    ],
+    [
+        'label' => 'Modalidad',
+        'value' => 'Presencial',
+    ],
+    [
+        'label' => 'Tema central',
+        'value' => 'Seguridad y Proximidad Social',
+    ],
+],
             ],
         ];
 

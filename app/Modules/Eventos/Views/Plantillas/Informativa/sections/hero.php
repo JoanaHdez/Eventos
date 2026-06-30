@@ -37,6 +37,7 @@
                 <li class="nav-item"><a class="nav-link" href="#programa">Programa / Ponentes</a></li>
                 <li class="nav-item"><a class="nav-link" href="#legado">Legado</a></li>
                 <li class="nav-item"><a class="nav-link" href="#general">Información General</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footer">Contactos</a></li>
             </ul>
         </div>
     </div>

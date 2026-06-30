@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="<?= $assetBase ?>/css/intro.css">
     <link rel="stylesheet" href="<?= $assetBase ?>/css/bloque_contenido.css">
     <link rel="stylesheet" href="<?= $assetBase ?>/css/actividad.css">
+    <link rel="stylesheet" href="<?= $assetBase ?>/css/programa.css">
+    <link rel="stylesheet" href="<?= $assetBase ?>/css/legado.css">
+    <link rel="stylesheet" href="<?= $assetBase ?>/css/general.css">
+    <?php $assetBase = base_url('assets/eventos/congresos/octavo'); ?>
     <link rel="stylesheet" href="<?= $assetBase ?>/css/footer.css">
 
 </head>
