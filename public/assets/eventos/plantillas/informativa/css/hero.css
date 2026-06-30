@@ -1,14 +1,37 @@
 .hero-informativa {
   min-height: 430px;
-  background-image: url("../img/hero1.jpg");
+  overflow: visible;
+  position: relative;
+}
+
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
-  overflow: visible;
+  opacity: 0;
+  transform: scale(1.04);
+  transition:
+    opacity 1.2s ease-in-out,
+    transform 5s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     270deg,
     rgb(0, 66, 188) 0%,
@@ -64,16 +87,19 @@
 }
 
 .hero-menu .nav-link {
+  position: relative;
   font-family: Georgia, serif;
   font-size: 0.78rem;
   text-transform: uppercase;
-  color: #000;
+  color: #000 !important;
   padding: 0.5rem 0;
   white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
-.hero-menu .nav-link:hover {
-  color: #3b16c9;
+.hero-menu .nav-link:hover,
+.hero-menu .nav-link:focus {
+  color: #0042bc !important;
 }
 
 @media (max-width: 991px) {

@@ -20,132 +20,145 @@ class Eventos_Controller extends BaseController
                 'lugar' => 'Nezahualcóyotl, Estado de México',
                 'descripcion' => 'Texto de ejemplo para probar la plantilla informativa.',
 
-                'logo_congreso' => 'assets/eventos/plantillas/informativa/img/logo-congreso.png',
+                'hero_imagenes' => [
+                    'assets/eventos/plantillas/informativa/img/hero1.jpg',
+                    'assets/eventos/plantillas/informativa/img/hero2.jpg',
+                    'assets/eventos/plantillas/informativa/img/hero3.jpg',
+                    'assets/eventos/plantillas/informativa/img/hero4.jpg',
+                ],
+
+                'logo_congreso' => 'assets/eventos/plantillas/informativa/img/intro1.png',
                 'intro' => 'El Primer Congreso Internacional de Seguridad y Proximidad Social marcó el inicio de un espacio de encuentro entre especialistas nacionales e internacionales, servidores públicos, académicos, consultores y representantes de instituciones dedicadas a la seguridad pública.
                  Durante tres días, el Congreso promovió el intercambio de experiencias y perspectivas sobre los retos de la seguridad ciudadana, impulsando el modelo de proximidad social como una estrategia para fortalecer la confianza entre la ciudadanía y las instituciones de seguridad.',
 
-                'video_principal' => 'https://www.youtube.com/embed/ID_DEL_VIDEO',
+                'video_principal' => 'https://www.youtube.com/embed/61br80u3baQ',
 
-                'video_titulo' => '1° Congreso Internacional de Seguridad y Proximidad Social',
+                'video_titulo' => '1° Congreso Internacional de Seguridad y Proximidad Social PARTE 1',
 
                 'videos_secundarios' => [
-                    [
-                        'titulo' => '1° Congreso Internacional de Seguridad y Proximidad Social',
+                    /* [
+                        'titulo' => '1° Congreso Internacional de Seguridad y Proximidad Social PARTE 2',
                         'url' => 'https://www.youtube.com/embed/ID_DEL_VIDEO',
-                    ],
+                    ], */
                 ],
 
-                'objetivo' => 'Lugar de encuentro en el que participan ponentes de diferentes países que comparten experiencias como servidores públicos, empresas privadas y consultores con diferentes perspectivas, a través de un espacio en común en materia de seguridad pública y proximidad social.',
+                'objetivo' => 'Este congreso se consolida como un espacio de encuentro global donde ponentes de diversos países comparten sus experiencias como servidores públicos, consultores y miembros de empresas privadas. A través de una visión multidisciplinaria, el evento ofrece una plataforma común para analizar, debatir y transformar las estrategias actuales en materia de seguridad pública y proximidad social.',
 
                 'tematica_intro' => 'Esta primera edición estuvo enfocada en el análisis de:',
 
                 'tematicas' => [
-                    'Seguridad Pública.',
-                    'Proximidad Social.',
-                    'Prevención de la violencia.',
-                    'Convivencia ciudadana.',
-                    'Experiencias internacionales en seguridad.',
-                    'Modelos policiales orientados a la ciudadanía.',
+
+                    'Seguridad Pública: Estrategias y retos contemporáneos.',
+                    'Proximidad Social: El vínculo humano entre la policía y su comunidad.',
+                    'Prevención de la Violencia: Mecanismos proactivos para la paz social.',
+                    'Convivencia Ciudadana: Construcción de entornos seguros y armónicos.',
+                    'Experiencias Internacionales en Seguridad: Casos de éxito globales.',
+                    'Modelos Policiales Orientados a la Ciudadanía: Transformación e institucionalidad con enfoque humano.',
                 ],
 
                 'personas_destacadas' => [
                     [
                         'nombre' => 'Presidente Municipal Juan Hugo de la Rosa',
                         'cargo' => 'Mensaje de bienvenida',
-                        'imagen' => 'assets/eventos/plantillas/informativa/img/persona1.jpg',
+                        'imagen' => 'assets/eventos/plantillas/informativa/img/bloque_contenido1.jpg',
                     ],
                     [
                         'nombre' => 'Lic. José Jorge Amador Amador',
                         'cargo' => 'Organización',
-                        'imagen' => 'assets/eventos/plantillas/informativa/img/persona2.jpg',
+                        'imagen' => 'assets/eventos/plantillas/informativa/img/bloque_contenido2.jpg',
                     ],
                 ],
 
                 'actividades' => [
                     [
                         'titulo' => 'Conferencias magistrales.',
-                        'descripcion' => 'Palabras de bienvenida a expositores e invitados además de convocar a ser partícipes en las conferencias. Con el propósito de difundir la problemática actual y las perspectivas para alcanzar soluciones viables en materia de seguridad y convivencia social.',
+                        'descripcion' => 'Espacios inaugurados con palabras de bienvenida a expositores e invitados, convocando a la acción y la participación activa. El propósito central de estas ponencias fue visibilizar la problemática actual, trazando perspectivas claras para alcanzar soluciones viables en seguridad y convivencia social.',
                     ],
                     [
                         'titulo' => 'Mesas de debate.',
-                        'descripcion' => 'Espacios de diálogo entre especialistas para compartir experiencias, propuestas y perspectivas en materia de seguridad pública.',
+                        'descripcion' => 'Paneles de diálogo técnico entre especialistas, diseñados para confrontar ideas, compartir experiencias de éxito y proponer nuevas rutas de acción en materia de seguridad pública.',
                     ],
                     [
                         'titulo' => 'Foros de discusión.',
-                        'descripcion' => 'Encuentros orientados al análisis de problemáticas actuales y posibles soluciones para fortalecer la proximidad social.',
+                        'descripcion' => 'Encuentros dinámicos orientados al análisis crítico de las problemáticas sociales vigentes y al desarrollo de soluciones prácticas orientadas a fortalecer la proximidad policial.',
                     ],
                     [
                         'titulo' => 'Intercambio de experiencias internacionales.',
-                        'descripcion' => 'Participación de especialistas nacionales e internacionales para compartir modelos y buenas prácticas.',
+                        'descripcion' => 'Una plataforma de vinculación global que reunió a expertos nacionales e internacionales con el fin de compartir, adaptar y replicar modelos de vanguardia y buenas prácticas en las comunidades locales.',
                     ],
                 ],
 
-                'actividad_imagen' => 'assets/eventos/plantillas/informativa/img/actividad1.jpg',
+                'actividad_imagen' => 'assets/eventos/plantillas/informativa/img/hero3.jpg',
 
                 'galeria' => [
                     [
-                        'src' => 'assets/eventos/plantillas/informativa/img/galeria1.jpg',
+                        'src' => 'assets/eventos/plantillas/informativa/img/hero1.jpg',
                         'alt' => 'Stand de tiro',
-                        'grande' => true,
+                        'tipo' => 'grande',
                     ],
                     [
-                        'src' => 'assets/eventos/plantillas/informativa/img/galeria2.jpg',
+                        'src' => 'assets/eventos/plantillas/informativa/img/hero2.jpg',
                         'alt' => 'Escenario del congreso',
+                        'tipo' => 'ancha',
                     ],
                     [
-                        'src' => 'assets/eventos/plantillas/informativa/img/galeria3.jpg',
+                        'src' => 'assets/eventos/plantillas/informativa/img/hero3.jpg',
                         'alt' => 'Participantes con programa',
+                        'tipo' => 'normal',
                     ],
                     [
-                        'src' => 'assets/eventos/plantillas/informativa/img/galeria4.jpg',
+                        'src' => 'assets/eventos/plantillas/informativa/img/hero4.jpg',
                         'alt' => 'Auditorio del congreso',
+                        'tipo' => 'alta',
                     ],
                     [
-                        'src' => 'assets/eventos/plantillas/informativa/img/galeria5.jpg',
+                        'src' => 'assets/eventos/plantillas/informativa/img/hero1.jpg',
                         'alt' => 'Ponente en escenario',
+                        'tipo' => 'normal',
                     ],
                     [
-                        'src' => 'assets/eventos/plantillas/informativa/img/galeria6.jpg',
+                        'src' => 'assets/eventos/plantillas/informativa/img/hero2.jpg',
                         'alt' => 'Entrega de reconocimientos',
-                        'grande' => true,
+                        'tipo' => 'ancha',
                     ],
                     [
-                        'src' => 'assets/eventos/plantillas/informativa/img/galeria7.jpg',
+                        'src' => 'assets/eventos/plantillas/informativa/img/hero3.jpg',
                         'alt' => 'Inauguración',
+                        'tipo' => 'normal',
                     ],
                 ],
 
-                'programa_imagen' => 'assets/eventos/plantillas/informativa/img/programa1.jpg',
-                'ponentes_imagen' => 'assets/eventos/plantillas/informativa/img/ponentes1.jpg',
+                'programa_imagen' => '',
+                'ponentes_imagen' => '',
 
-                'legado' => 'El Primer Congreso Internacional de Seguridad y Proximidad Social representó el inicio de un proyecto institucional que, con el paso de los años, se consolidó como un espacio permanente para el intercambio de conocimientos, experiencias y buenas prácticas en materia de seguridad pública y proximidad social, contando con la participación de especialistas de México y diversos países.',
+                'legado' => 'El Primer Congreso Internacional de Seguridad y Proximidad Social representó el origen de un ambicioso proyecto institucional. Con el paso de los años, este esfuerzo inicial logró consolidarse como un espacio permanente y referente para el intercambio de conocimientos, experiencias y buenas prácticas, enriquecido permanentemente por la participación de destacados especialistas de México y diversos países del mundo.',
 
                 'informacion_general' => [
-    [
-        'label' => 'Edición',
-        'value' => '1°',
-    ],
-    [
-        'label' => 'Fecha',
-        'value' => '10 al 12 de mayo de 2017',
-    ],
-    [
-        'label' => 'Sede',
-        'value' => 'Nezahualcóyotl, Estado de México',
-    ],
-    [
-        'label' => 'Duración',
-        'value' => '3 días',
-    ],
-    [
-        'label' => 'Modalidad',
-        'value' => 'Presencial',
-    ],
-    [
-        'label' => 'Tema central',
-        'value' => 'Seguridad y Proximidad Social',
-    ],
-],
+                    [
+                        'label' => 'Edición',
+                        'value' => '1°',
+                    ],
+                    [
+                        'label' => 'Fecha',
+                        'value' => '10 al 12 de mayo de 2017',
+                    ],
+                    [
+                        'label' => 'Sede',
+                        'value' => 'Nezahualcóyotl, Estado de México',
+                    ],
+                    [
+                        'label' => 'Duración',
+                        'value' => '3 días',
+                    ],
+                    [
+                        'label' => 'Modalidad',
+                        'value' => 'Presencial',
+                    ],
+                    [
+                        'label' => 'Tema central',
+                        'value' => 'Seguridad y Proximidad Social',
+                    ],
+                ],
             ],
         ];
 

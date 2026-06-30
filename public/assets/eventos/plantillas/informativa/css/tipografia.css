@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Exo 2";
+  src:
+    local("Exo 2 Regular"),
+    local("Exo2-Regular"),
+    url("../../../../fonts/Exo2-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src:
+    local("Exo 2 Medium"),
+    local("Exo2-Medium"),
+    url("../../../../fonts/Exo2-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src:
+    local("Exo 2 SemiBold"),
+    local("Exo2-SemiBold"),
+    url("../../../../fonts/Exo2-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src:
+    local("Exo 2 Bold"),
+    local("Exo2-Bold"),
+    url("../../../../fonts/Exo2-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.hero-informativa,
+.hero-informativa *,
+.hero-menu,
+.hero-menu *,
+.intro-congreso,
+.intro-congreso *,
+.bloque-contenido,
+.bloque-contenido *,
+.actividad-section,
+.actividad-section *,
+.galeria-section,
+.galeria-section *,
+.general-section,
+.general-section *,
+.legado-section,
+.legado-section *,
+.objetivo-section,
+.objetivo-section *,
+.programa-section,
+.programa-section *,
+.tematica-section,
+.tematica-section *,
+.transmision-section,
+.transmision-section * {
+  font-family: "Exo 2", "Segoe UI", Arial, sans-serif !important;
+}
+
+.section-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.subsection-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.texto-general {
+    font-size: 0.95rem;
+    font-weight: 400;
+}

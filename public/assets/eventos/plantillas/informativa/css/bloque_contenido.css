@@ -19,9 +19,10 @@
     line-height: 1.7;
     text-transform: uppercase;
     color: #111;
+    text-align: justify;
 }
 
-.video-principal {
+.ratio {
     border-radius: 14px;
     overflow: hidden;
 }
@@ -39,20 +40,27 @@
     text-align: center;
 }
 
+.personas-section {
+    margin-top: 2rem;
+}
+
+.persona-cargo {
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
 .persona-img {
-    max-height: 150px;
+    max-height: 170px;
     object-fit: cover;
+    margin-bottom: 0.8rem;
 }
 
 .persona-nombre {
     font-family: Georgia, serif;
     font-size: 0.8rem;
     text-transform: uppercase;
-    margin-top: 0.6rem;
-}
-
-.persona-cargo {
-    font-family: Georgia, serif;
-    font-size: 0.75rem;
-    text-transform: uppercase;
+    font-weight: 600;
 }
