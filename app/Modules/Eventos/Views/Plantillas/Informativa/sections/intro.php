@@ -3,7 +3,7 @@
         <div class="row align-items-center g-4">
             <div class="col-12 col-md-4 text-center">
                 <img 
-                    src="<?= base_url($logo_congreso ?? 'assets/eventos/plantillas/informativa/img/logo-congreso.png') ?>" 
+                    src="<?= base_url($logo_congreso ?? 'assets/eventos/plantillas/informativa/img/1/intro1.png') ?>" 
                     alt="<?= esc($titulo ?? 'Congreso') ?>" 
                     class="img-fluid intro-logo"
                 >

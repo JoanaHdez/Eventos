@@ -78,8 +78,13 @@
 }
 
 .hero-menu {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
   margin-top: -1px;
   padding: 0.75rem 0;
+  background: #fff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .hero-menu .navbar-nav {
@@ -104,37 +109,117 @@
 
 @media (max-width: 991px) {
   .hero-informativa {
-    min-height: 360px;
-  }
-
-  .hero-overlay {
-    background: rgba(32, 0, 140, 0.72);
+    min-height: 420px;
+    padding-top: 70px;
   }
 
   .hero-content {
-    padding: 3rem 1rem;
+    padding: 2.5rem 1.5rem 5.5rem;
     text-align: center;
   }
 
   .hero-lugar {
+    position: absolute;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 82%;
+    margin: 0;
+    padding: 1rem 2rem;
     text-align: center;
-    font-size: 0.8rem;
+  }
+
+  .hero-menu {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    width: auto;
+    z-index: 9999;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0;
+  }
+
+  .hero-menu .container-fluid {
+    padding: 0;
+    justify-content: flex-start !important;
+  }
+
+  .hero-menu .navbar-toggler {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .hero-menu .navbar-collapse {
+    position: fixed;
+    top: 62px;
+    left: 12px;
+    width: 280px;
+    max-width: calc(100vw - 24px);
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  }
+
+  .hero-menu .navbar-nav {
+    gap: 0.4rem;
+    text-align: left !important;
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 480px) {
   .hero-informativa {
-    min-height: 310px;
+    min-height: 340px;
+    padding-top: 55px;
+  }
+
+  .hero-content {
+    padding: 2rem 1rem 5rem;
+    text-align: center;
   }
 
   .hero-content h1 {
-    font-size: 1.8rem;
+    max-width: 320px;
+    margin: 0 auto;
   }
 
   .hero-fecha {
+    margin-top: 1rem;
     font-size: 1rem;
+  }
+
+  .hero-lugar {
+    width: 92%;
+    padding: 0.8rem 1rem;
+
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 0.78rem;
+
+    clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%);
+  }
+
+  .hero-menu {
+    top: 10px;
+    left: 10px;
+  }
+
+  .hero-menu .navbar-collapse {
+    top: 58px;
+    left: 10px;
+    width: calc(100vw - 20px);
+  }
+
+  .hero-menu .navbar-toggler {
+    padding: 0.35rem 0.55rem;
+  }
+
+  .hero-menu .nav-link {
+    padding: 0.65rem 0;
+    font-size: 0.9rem;
   }
 }

@@ -17,3 +17,4 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('slide actual:', current);
     }, 3000);
 });
+

@@ -18,15 +18,17 @@ if (!empty($videos_secundarios)) {
         }
     }
 }
+
+$totalVideos = count($videos);
 ?>
 
-<?php if (!empty($videos)): ?>
+<?php if ($totalVideos > 0): ?>
 <section class="transmision-section" id="transmisiones">
     <h2 class="section-title">Transmisiones</h2>
 
-    <div class="row g-3">
-        <?php foreach ($videos as $index => $video): ?>
-            <div class="<?= $index === 0 ? 'col-12' : 'col-12 col-md-6' ?>">
+    <div class="row g-4">
+        <?php foreach ($videos as $video): ?>
+            <div class="<?= $totalVideos > 2 ? 'col-12 col-md-6 col-lg-4' : 'col-12 col-md-6' ?>">
                 <div class="ratio ratio-16x9 video-frame">
                     <iframe
                         src="<?= esc($video['url']) ?>"
@@ -35,7 +37,7 @@ if (!empty($videos_secundarios)) {
                     </iframe>
                 </div>
 
-                <p class="<?= $index === 0 ? 'video-titulo' : 'video-titulo-secundario' ?> text-center">
+                <p class="video-titulo-secundario text-center">
                     <?= esc($video['titulo']) ?>
                 </p>
             </div>

@@ -1,12 +1,23 @@
 <?php
-$tieneVideos = !empty($video_principal) || !empty($videos_secundarios);
+$totalVideos = 0;
+
+if (!empty($video_principal)) {
+    $totalVideos++;
+}
+
+if (!empty($videos_secundarios)) {
+    $totalVideos += count($videos_secundarios);
+}
+
+$tieneVideos = $totalVideos > 0;
+$muchosVideos = $totalVideos > 2;
 ?>
 
 <section class="bloque-contenido py-4" id="contenido">
     <div class="container">
-        <div class="row g-4">
 
-            <?php if ($tieneVideos): ?>
+        <?php if ($tieneVideos && !$muchosVideos): ?>
+            <div class="row g-4">
                 <div class="col-12 col-lg-6">
                     <?= view('App\Modules\Eventos\Views\Plantillas\Informativa\sections\transmision') ?>
                 </div>
@@ -15,15 +26,23 @@ $tieneVideos = !empty($video_principal) || !empty($videos_secundarios);
                     <?= view('App\Modules\Eventos\Views\Plantillas\Informativa\sections\objetivo') ?>
                     <?= view('App\Modules\Eventos\Views\Plantillas\Informativa\sections\tematica') ?>
                 </div>
-            <?php else: ?>
+            </div>
+        <?php else: ?>
+            <div class="row g-4">
                 <div class="col-12">
                     <?= view('App\Modules\Eventos\Views\Plantillas\Informativa\sections\objetivo') ?>
                     <?= view('App\Modules\Eventos\Views\Plantillas\Informativa\sections\tematica') ?>
                 </div>
-            <?php endif; ?>
 
-        </div>
+                <?php if ($tieneVideos): ?>
+                    <div class="col-12">
+                        <?= view('App\Modules\Eventos\Views\Plantillas\Informativa\sections\transmision') ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
 
         <?= view('App\Modules\Eventos\Views\Plantillas\Informativa\sections\personas_destacadas') ?>
+
     </div>
 </section>

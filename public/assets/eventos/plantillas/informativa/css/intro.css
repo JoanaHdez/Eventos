@@ -22,7 +22,7 @@
 
 @media (max-width: 767px) {
     .intro-texto {
-        text-align: center;
+        text-align: justify;
         font-size: 0.85rem;
     }
 }
