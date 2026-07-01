@@ -3,7 +3,7 @@
   src:
     local("Exo 2 Regular"),
     local("Exo2-Regular"),
-    url("../fonts/Exo2-Regular.ttf?v=20260625-3") format("truetype");
+    url("../../../../fonts/Exo2-Regular.ttf?v=20260625-3") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -14,7 +14,7 @@
   src:
     local("Exo 2 SemiBold"),
     local("Exo2-SemiBold"),
-    url("../fonts/Exo2-SemiBold.ttf?v=20260625-3") format("truetype");
+    url("../../../../fonts/Exo2-SemiBold.ttf?v=20260625-3") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@
   src:
     local("Exo 2 Bold"),
     local("Exo2-Bold"),
-    url("../fonts/Exo2-Bold.ttf?v=20260625-3") format("truetype");
+    url("../../../../fonts/Exo2-Bold.ttf?v=20260625-3") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
