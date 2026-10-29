@@ -1,0 +1,135 @@
+.semblanzas-header {
+    padding: 2rem 3rem 1.5rem;
+    background: #111111;
+    color: #ffffff;
+}
+
+.semblanzas-header__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.7fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.semblanzas-header__eyebrow {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.semblanzas-header__title {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.semblanzas-header__description {
+    max-width: 700px;
+    margin: 1rem 0 0;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.semblanzas-header__actions {
+    text-align: center;
+}
+
+.semblanzas-header__actions::before {
+    content: "¿Perteneces a la lista de ponentes?";
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.semblanzas-header__actions .btn {
+    min-width: 160px;
+    border: 0;
+    border-radius: 999px;
+    background: #e5e7eb;
+    color: #111111;
+    font-weight: 700;
+}
+
+.semblanzas-header__actions .btn:hover {
+    background: #245cc4;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   BOTÓN REGRESAR
+   ========================================================= */
+
+.semblanza-slide {
+    position: relative;
+}
+
+.semblanza-regresar {
+    position: absolute;
+    top: 50px;
+    left: 32px;
+    z-index: 40;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-width: 130px;
+    height: 50px;
+    padding: 0 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.96);
+    color: #17358f;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.semblanza-regresar:hover {
+    transform: translateX(-4px);
+
+    background: #3558c8;
+    color: #ffffff;
+    text-decoration: none;
+
+    box-shadow: 0 16px 35px rgba(53, 88, 200, 0.32);
+}
+
+.semblanza-regresar svg {
+    display: block;
+    flex-shrink: 0;
+}
+
+.semblanzas-bloque .semblanzas-header,
+.semblanzas-bloque .semblanzas-tools,
+.semblanzas-bloque .semblanzas-visor-section,
+.semblanzas-bloque .semblanza-visor,
+.semblanzas-bloque .semblanza-slide {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}

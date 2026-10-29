@@ -1,0 +1,279 @@
+﻿.ponente-login-modal .modal-dialog {
+    width: calc(100% - 2rem);
+    max-width: 520px;
+    margin-right: auto;
+    margin-left: auto;
+    max-height: min(92vh, 92dvh);
+}
+
+.ponente-login-modal__contenido {
+    position: relative;
+
+    padding: 3.2rem;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(53, 88, 200, 0.32),
+            transparent 38%
+        ),
+        #151515;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.58);
+}
+
+.ponente-login-modal__cerrar {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 5;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+
+    font-size: 1.8rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.ponente-login-modal__cerrar:hover {
+    transform: rotate(90deg);
+
+    background: #ffffff;
+    color: #3558c8;
+}
+
+.ponente-login-modal__encabezado {
+    margin-bottom: 2.2rem;
+    padding-right: 2.5rem;
+}
+
+.ponente-login-modal__etiqueta {
+    display: inline-block;
+
+    margin-bottom: 0.8rem;
+
+    color: #8db8ff;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.ponente-login-modal__encabezado h2 {
+    margin: 0;
+
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.ponente-login-modal__encabezado p {
+    margin: 1rem 0 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.ponente-login-modal__formulario {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.3rem;
+}
+
+.ponente-login-modal__campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.55rem;
+}
+
+.ponente-login-modal__campo label {
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.ponente-login-modal__input {
+    display: flex;
+    align-items: center;
+
+    min-height: 58px;
+
+    padding: 0 1rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.58);
+
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.ponente-login-modal__input:focus-within {
+    border-color: #5375dc;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    box-shadow:
+        0 0 0 4px rgba(53, 88, 200, 0.18);
+}
+
+.ponente-login-modal__input input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 0.8rem 0.85rem;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 0.98rem;
+}
+
+.ponente-login-modal__input input::placeholder {
+    color: rgba(255, 255, 255, 0.38);
+}
+
+.ponente-login-modal__mostrar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: transparent;
+    color: rgba(255, 255, 255, 0.58);
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.ponente-login-modal__mostrar:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+.ponente-login-modal__mensaje {
+    margin: -0.2rem 0 0;
+
+    color: #ff7b86;
+
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.ponente-login-modal__boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.8rem;
+
+    min-height: 58px;
+    margin-top: 0.25rem;
+    padding: 0.8rem 1.4rem;
+
+    border: 0;
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3558c8,
+            #2347b8
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 30px rgba(35, 71, 184, 0.32);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+.ponente-login-modal__boton:hover {
+    transform: translateY(-3px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 20px 38px rgba(35, 71, 184, 0.42);
+}
+
+@media (max-width: 576px) {
+    .ponente-login-modal .modal-dialog {
+        width: calc(100% - 1rem);
+    }
+
+    .ponente-login-modal__contenido {
+        padding: 2.5rem 1.35rem 1.6rem;
+
+        border-radius: 22px;
+    }
+
+    .ponente-login-modal__encabezado {
+        padding-right: 2rem;
+    }
+}

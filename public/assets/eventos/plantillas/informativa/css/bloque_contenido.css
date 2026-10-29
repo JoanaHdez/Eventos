@@ -17,7 +17,6 @@
     font-family: Georgia, serif;
     font-size: 0.95rem;
     line-height: 1.7;
-    text-transform: uppercase;
     color: #111;
     text-align: justify;
 }
@@ -32,7 +31,6 @@
     font-family: Georgia, serif;
     font-weight: 700;
     font-size: 0.9rem;
-    text-transform: uppercase;
 }
 
 .video-titulo-secundario {
@@ -47,7 +45,6 @@
 .persona-cargo {
     font-family: Georgia, serif;
     font-size: 0.9rem;
-    text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 0.8rem;
 }
@@ -61,6 +58,5 @@
 .persona-nombre {
     font-family: Georgia, serif;
     font-size: 0.8rem;
-    text-transform: uppercase;
     font-weight: 600;
 }

@@ -1,0 +1,158 @@
+.octavo-legado {
+  position: relative;
+  overflow: hidden;
+  margin-top: clamp(2rem, 4vw, 4rem);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(161, 29, 58, 0.42), transparent 34%),
+    linear-gradient(118deg, #521022 0%, #7c142b 56%, #5e1023 100%);
+  color: #fff;
+  padding: clamp(4.5rem, 8vw, 8rem) 0;
+}
+
+.octavo-legado::before,
+.octavo-legado::after {
+  position: absolute;
+  content: "";
+  width: 11rem;
+  height: 11rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.octavo-legado::before {
+  top: -6rem;
+  left: -5rem;
+}
+
+.octavo-legado::after {
+  right: -5rem;
+  bottom: -7rem;
+}
+
+.octavo-legado__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: center;
+}
+
+.octavo-legado__copy {
+  max-width: 620px;
+}
+
+.octavo-legado__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+  color: #f6dfe5;
+  font-size: clamp(0.78rem, 1.2vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.octavo-legado__eyebrow::before {
+  content: "";
+  width: 2.5rem;
+  height: 0.2rem;
+  flex: 0 0 auto;
+  background: #f6dfe5;
+}
+
+.octavo-legado__title {
+  max-width: 570px;
+  margin: 0 0 1.7rem;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.octavo-legado__body {
+  max-width: 610px;
+  color: #fff;
+  font-size: clamp(1rem, 1.35vw, 1.16rem);
+  line-height: 1.75;
+}
+
+.octavo-legado__body p {
+  margin: 0;
+  text-align: justify;
+}
+
+.octavo-legado__body p + p {
+  margin-top: 1.15rem;
+}
+
+.octavo-legado__media {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  padding: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.octavo-legado__media img {
+  display: block;
+  width: 100%;
+  max-height: 34rem;
+  object-fit: cover;
+  border-radius: 0.7rem;
+}
+
+.octavo-legado__media-overlay {
+  position: absolute;
+  inset: 0.55rem;
+  z-index: 1;
+  border-radius: 0.7rem;
+  background: linear-gradient(135deg, rgba(124, 20, 43, 0.14), rgba(37, 7, 17, 0.3));
+  pointer-events: none;
+}
+
+main:has(.octavo-legado) + #footer.footer {
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .octavo-legado {
+    margin-top: 2rem;
+    padding: 4rem 0;
+  }
+
+  .octavo-legado__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .octavo-legado__title {
+    font-size: clamp(1.95rem, 8vw, 2.65rem);
+  }
+
+  .octavo-legado__body {
+    line-height: 1.65;
+  }
+
+  .octavo-legado__body p {
+    text-align: left;
+  }
+
+  .octavo-legado__media img {
+    max-height: 22rem;
+  }
+
+  main:has(.octavo-legado) + #footer.footer {
+    margin-top: 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .octavo-legado,
+  .octavo-legado * {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,707 @@
+﻿/* =========================================================
+   CONTENEDOR DEL VISOR
+   ========================================================= */
+
+.semblanzas-visor-section {
+  padding: 0;
+  background: transparent;
+}
+
+.semblanzas-visor-section .container {
+  width: 100%;
+  max-width: none;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.semblanza-visor {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  background: transparent;
+}
+
+.semblanza-slide {
+  position: relative;
+  width: 100%;
+  height: clamp(600px, 72dvh, 720px);
+  min-height: clamp(600px, 72dvh, 720px);
+  overflow: hidden;
+  background: transparent;
+}
+
+
+/* =========================================================
+   PAÍS GRANDE
+   ========================================================= */
+
+.semblanza-slide__pais {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+
+  width: 100%;
+
+  transform: translateX(-50%);
+
+  color: #245cc4;
+
+  font-size: clamp(9rem, 15vw, 14rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+
+  text-align: center;
+  text-transform: uppercase;
+  white-space: normal;
+  overflow-wrap: anywhere;
+
+  pointer-events: none;
+
+  text-shadow:
+    0 0 25px rgba(255, 255, 255, 0.08);
+}
+
+
+/* País sólido con colores de la bandera */
+
+.semblanza-slide__pais--fondo {
+  z-index: 2;
+
+  color: transparent;
+
+  background: var(
+    --pais-gradiente,
+    linear-gradient(90deg, #245cc4, #8db8ff)
+  );
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  filter:
+    drop-shadow(0 5px 10px rgba(0, 0, 0, 0.35));
+}
+
+
+/* Contorno del país delante de la persona */
+
+.semblanza-slide__pais--contorno {
+  z-index: 5;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+
+  -webkit-text-stroke: 2px var(
+    --pais-contorno,
+    #ffffff
+  );
+}
+
+
+/* =========================================================
+   IMAGEN DEL PONENTE
+   ========================================================= */
+
+.semblanza-slide__imagen {
+  position: absolute;
+  top: -30px;
+  bottom: 0;
+  left: 50%;
+  z-index: 3;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+
+  transform: translateX(-50%);
+
+  opacity: 1;
+
+  transition:
+    opacity 0.42s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.52s cubic-bezier(0.22, 0.61, 0.36, 1),
+    filter 0.42s ease;
+}
+
+
+.semblanza-slide__imagen img {
+  display: block;
+
+
+
+
+  transition:
+    width 0.45s cubic-bezier(0.22, 0.61, 0.36, 1),
+    height 0.45s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 0.35s ease;
+}
+
+
+/*
+ * Solo se aplica a los ponentes que tengan:
+ * 'reducir_imagen' => true
+ */
+
+.semblanza-slide__imagen--reducida img {
+  width: 88%;
+  height: 88%;
+
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+
+/*
+ * Puedes ajustar únicamente la imagen reducida:
+ *
+ * Más pequeña:
+ * width: 80%;
+ * height: 80%;
+ *
+ * Más grande:
+ * width: 92%;
+ * height: 92%;
+ */
+
+
+/* =========================================================
+   INFORMACIÓN DEL PONENTE
+   ========================================================= */
+
+.semblanza-slide__info {
+  position: absolute;
+  top: 62%;
+  left: clamp(5rem, 8vw, 9.375rem);
+  z-index: 8;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 28px;
+
+  max-width: min(520px, calc(100% - 22rem));
+
+  transform: translateY(-50%);
+
+  opacity: 1;
+
+  transition:
+    opacity 0.42s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.52s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.semblanza-slide__info h2 {
+  margin: 0 0 2.6rem;
+
+  color: #ffffff;
+
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   BOTÓN VER SEMBLANZA
+   ========================================================= */
+
+.semblanza-slide__boton {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  z-index: 15;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+
+  min-width: 230px;
+  min-height: 60px;
+
+  padding: 0.75rem 1rem 0.75rem 1.5rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.96);
+  color: #153b9d;
+
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.18);
+
+  transition:
+    background-color 0.28s ease,
+    color 0.28s ease,
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.semblanza-slide__boton-texto {
+  flex: 1;
+  text-align: left;
+}
+
+.semblanza-slide__boton-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #245cc4;
+  color: #ffffff;
+
+  transition:
+    background-color 0.28s ease,
+    color 0.28s ease,
+    transform 0.28s ease;
+}
+
+.semblanza-slide__boton:hover {
+  transform: translateY(-4px);
+
+  background: #245cc4;
+  color: #ffffff;
+
+  box-shadow:
+    0 18px 35px rgba(36, 92, 196, 0.35);
+}
+
+.semblanza-slide__boton:hover
+.semblanza-slide__boton-icono {
+  transform: translateX(4px);
+
+  background: #ffffff;
+  color: #245cc4;
+}
+
+
+/* =========================================================
+   FRANJA DEL CARGO
+   ========================================================= */
+
+.semblanza-slide__franja {
+  position: absolute;
+  bottom: 45px;
+  left: -5%;
+  z-index: 7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 110%;
+  min-height: 105px;
+
+  padding: 14px 12%;
+
+  transform: rotate(-7deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      #245cc4,
+      rgba(36, 92, 196, 0.58),
+      #356fe0
+    );
+
+  color: #ffffff;
+
+  font-size: clamp(1.8rem, 2.7vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35);
+
+  opacity: 1;
+
+  transition:
+    opacity 0.42s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.52s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.semblanza-slide__cargo {
+  display: block;
+
+  color: #ffffff !important;
+
+  font-size: clamp(1.2rem, 2.2vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FLECHAS
+   ========================================================= */
+
+.semblanza-flecha {
+  position: absolute;
+  top: 50%;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 72px;
+  height: 72px;
+
+  padding: 0;
+
+  transform: translateY(-50%);
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.96);
+  color: #245cc4;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.30);
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.semblanza-flecha--anterior {
+  left: 22px;
+}
+
+.semblanza-flecha--siguiente {
+  right: 22px;
+}
+
+.semblanza-flecha:hover {
+  transform:
+    translateY(-50%)
+    scale(1.08);
+
+  background: #3157cf;
+  color: #ffffff;
+
+  box-shadow:
+    0 18px 40px rgba(36, 92, 196, 0.45);
+}
+
+.semblanza-flecha:active {
+  transform:
+    translateY(-50%)
+    scale(0.95);
+}
+
+.semblanza-flecha:focus-visible {
+  outline: 3px solid rgba(141, 184, 255, 0.7);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   FONDOS TRANSPARENTES
+   ========================================================= */
+
+.semblanzas-bloque .semblanzas-header,
+.semblanzas-bloque .semblanzas-tools,
+.semblanzas-bloque .semblanzas-visor-section,
+.semblanzas-bloque .semblanza-visor,
+.semblanzas-bloque .semblanza-slide {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+
+/* =========================================================
+   ANIMACIÓN DE SALIDA
+   ========================================================= */
+
+.semblanza-slide--saliendo
+.semblanza-slide__pais {
+  opacity: 0;
+
+  transform:
+    translateX(-50%)
+    scale(0.985);
+
+  filter: blur(2px);
+}
+
+.semblanza-slide--saliendo
+.semblanza-slide__imagen {
+  opacity: 0;
+
+  transform:
+    translateX(-50%)
+    translateY(12px)
+    scale(0.99);
+
+  filter: blur(1.5px);
+}
+
+.semblanza-slide--saliendo
+.semblanza-slide__info {
+  opacity: 0;
+
+  transform:
+    translateY(-50%)
+    translateX(-14px);
+}
+
+.semblanza-slide--saliendo
+.semblanza-slide__franja {
+  opacity: 0;
+
+  transform:
+    rotate(-7deg)
+    translateY(14px);
+}
+
+
+/* =========================================================
+   ANIMACIÓN DE ENTRADA DESDE LA DERECHA
+   ========================================================= */
+
+.semblanza-slide--entrando-derecha
+.semblanza-slide__pais {
+  animation:
+    paisEntrada
+    0.52s
+    cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.semblanza-slide--entrando-derecha
+.semblanza-slide__imagen {
+  animation:
+    imagenEntradaDerecha
+    0.30s
+    cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.semblanza-slide--entrando-derecha
+.semblanza-slide__info {
+  animation:
+    infoEntradaDerecha
+    0.48s
+    cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.semblanza-slide--entrando-derecha
+.semblanza-slide__franja {
+  animation:
+    franjaEntrada
+    0.30s
+    cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+
+/* =========================================================
+   ANIMACIÓN DE ENTRADA DESDE LA IZQUIERDA
+   ========================================================= */
+
+.semblanza-slide--entrando-izquierda
+.semblanza-slide__pais {
+  animation:
+    paisEntrada
+    0.52s
+    cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.semblanza-slide--entrando-izquierda
+.semblanza-slide__imagen {
+  animation:
+    imagenEntradaIzquierda
+    0.56s
+    cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.semblanza-slide--entrando-izquierda
+.semblanza-slide__info {
+  animation:
+    infoEntradaIzquierda
+    0.48s
+    cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.semblanza-slide--entrando-izquierda
+.semblanza-slide__franja {
+  animation:
+    franjaEntrada
+    0.56s
+    cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+
+/* =========================================================
+   KEYFRAMES
+   ========================================================= */
+
+@keyframes paisEntrada {
+  from {
+    opacity: 0;
+    filter: blur(2px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes imagenEntradaDerecha {
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(-47%)
+      translateY(8px)
+      scale(0.99);
+
+    filter: blur(1.5px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(-50%)
+      translateY(0)
+      scale(1);
+
+    filter: blur(0);
+  }
+}
+
+@keyframes imagenEntradaIzquierda {
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(-53%)
+      translateY(8px)
+      scale(0.99);
+
+    filter: blur(1.5px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(-50%)
+      translateY(0)
+      scale(1);
+
+    filter: blur(0);
+  }
+}
+
+@keyframes infoEntradaDerecha {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-50%)
+      translateX(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(-50%)
+      translateX(0);
+  }
+}
+
+@keyframes infoEntradaIzquierda {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-50%)
+      translateX(-18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(-50%)
+      translateX(0);
+  }
+}
+
+@keyframes franjaEntrada {
+  from {
+    opacity: 0;
+
+    transform:
+      rotate(-7deg)
+      translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      rotate(-7deg)
+      translateY(0);
+  }
+}
+
+/* =========================================================
+   ACCESIBILIDAD: REDUCIR MOVIMIENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .semblanza-slide__pais,
+  .semblanza-slide__imagen,
+  .semblanza-slide__imagen img,
+  .semblanza-slide__info,
+  .semblanza-slide__franja,
+  .semblanza-flecha,
+  .semblanza-slide__boton {
+    animation: none !important;
+    transition: none !important;
+  }
+}

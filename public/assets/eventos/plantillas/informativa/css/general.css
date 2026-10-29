@@ -29,7 +29,6 @@
 .general-value {
     font-size: 0.9rem;
     font-weight: 700;
-    text-transform: uppercase;
 }
 
 @media (max-width: 575px) {

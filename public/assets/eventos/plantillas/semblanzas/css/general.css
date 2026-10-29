@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    background: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    min-height: 100vh;
+}
+
+:root {
+    --semblanzas-primary: #0042bc;
+    --semblanzas-text: #111827;
+    --semblanzas-muted: #4b5563;
+    --semblanzas-background: #f4f6f9;
+    --semblanzas-white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--semblanzas-background);
+    color: var(--semblanzas-text);
+    font-family: Arial, sans-serif;
+}
+
+main {
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.semblanzas-bloque {
+    position: relative;
+
+    width: calc(100% - 12px);
+    max-width: 1900px;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background-color: #111111;
+    background-image: url("../img/COYOTE.png");
+    background-repeat: no-repeat;
+    background-size: 85% auto;
+
+    /* Horizontal | Vertical */
+    
+    background-position: center -400px;
+}

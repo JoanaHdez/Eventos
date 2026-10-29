@@ -1,0 +1,387 @@
+﻿.material-modal .modal-dialog{
+    width: calc(100% - 2rem);
+    max-width:700px;
+    max-height: min(92vh, 92dvh);
+}
+
+.material-modal__contenido{
+
+    background:#151515;
+    color:#fff;
+
+    border-radius:28px;
+
+    padding:3rem;
+
+    border:none;
+
+    max-height: min(92vh, 92dvh);
+    overflow-x:hidden;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.45);
+}
+
+.material-modal__cerrar{
+
+    position:absolute;
+
+    top:20px;
+    right:20px;
+
+    width:44px;
+    height:44px;
+
+    border-radius:50%;
+    border:none;
+
+    background:#ffffff18;
+
+    color:#fff;
+
+    font-size:2rem;
+}
+
+.material-modal__header{
+
+    margin-bottom:2rem;
+}
+
+.material-modal__etiqueta{
+
+    color:#8db8ff;
+
+    text-transform:uppercase;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+
+    font-size:.75rem;
+}
+
+.material-modal__header h2{
+
+    margin-top:.8rem;
+
+    font-size:2.2rem;
+}
+
+.material-modal__header p{
+
+    color:#c7c7c7;
+}
+
+.material-modal__dropzone{
+
+    width:100%;
+
+    min-height:clamp(170px, 32dvh, 260px);
+
+    border:2px dashed #4b6de2;
+
+    border-radius:22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:1rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.material-modal__dropzone:hover{
+
+    background:#1f1f1f;
+}
+
+.material-modal__icono{
+
+    font-size:4rem;
+
+    color:#4d73df;
+}
+
+.material-modal__seleccionar{
+
+    border:none;
+
+    padding:.9rem 2rem;
+
+    border-radius:999px;
+
+    background:#3558c8;
+
+    color:#fff;
+
+    font-weight:700;
+}
+
+.material-modal__archivo{
+
+    margin-top:1.5rem;
+
+    color:#8db8ff;
+
+    font-weight:600;
+}
+
+.material-modal__formatos{
+
+    display:block;
+
+    margin-top:1rem;
+
+    color:#9c9c9c;
+}
+
+.material-modal__subir{
+
+    margin-top:2rem;
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#3558c8;
+
+    color:#fff;
+
+    font-weight:700;
+
+    font-size:1rem;
+}
+
+/* =========================================================
+   RESULTADO DE LA CARGA
+   ========================================================= */
+
+.material-modal__resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 320px;
+    padding: 2rem;
+
+    text-align: center;
+
+    animation: materialResultadoEntrada 0.35s ease;
+}
+
+.material-modal__resultado[hidden] {
+    display: none;
+}
+
+.material-modal__resultado-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 92px;
+    height: 92px;
+    margin-bottom: 1.4rem;
+
+    border-radius: 50%;
+}
+
+.material-modal__resultado h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.material-modal__resultado p {
+    margin: 0.8rem 0 0;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+/* Éxito */
+
+.material-modal__resultado--exito
+.material-modal__resultado-icono {
+    background: rgba(58, 190, 110, 0.13);
+    color: #43cf7d;
+
+    box-shadow:
+        0 0 0 10px rgba(58, 190, 110, 0.06);
+}
+
+/* Error */
+
+.material-modal__resultado--error
+.material-modal__resultado-icono {
+    background: rgba(221, 72, 85, 0.13);
+    color: #ff6573;
+
+    box-shadow:
+        0 0 0 10px rgba(221, 72, 85, 0.06);
+}
+
+@keyframes materialResultadoEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================================================
+   LISTA DE ARCHIVOS SELECCIONADOS
+   Mantiene el diseño actual
+   ========================================================= */
+
+.material-modal__archivo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    margin-top: 1.4rem;
+
+    color: #8db8ff;
+    font-weight: 600;
+}
+
+.material-modal__archivo[hidden] {
+    display: none;
+}
+
+.material-modal__archivo-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+    padding: 1rem 1.2rem;
+
+    border: 1px solid rgba(141, 184, 255, 0.22);
+    border-radius: 16px;
+
+    background: rgba(53, 88, 200, 0.12);
+}
+
+.material-modal__archivo-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: #3558c8;
+    color: #ffffff;
+
+    font-size: 1.4rem;
+}
+
+.material-modal__archivo-datos {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    min-width: 0;
+}
+
+.material-modal__archivo-datos strong {
+    overflow: hidden;
+
+    color: #ffffff;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.material-modal__archivo-datos span {
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.material-modal__archivo-eliminar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 1.35rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.material-modal__archivo-eliminar:hover {
+    transform: scale(1.06);
+
+    border-color: rgba(255, 255, 255, 0.25);
+
+    background: #d84755;
+    color: #ffffff;
+}
+
+.material-modal__archivo-error {
+    margin: 0;
+    padding: 1rem 1.2rem;
+
+    border: 1px solid rgba(255, 123, 134, 0.28);
+    border-radius: 16px;
+
+    background: rgba(216, 71, 85, 0.12);
+    color: #ff8d97;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}

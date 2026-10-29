@@ -1,0 +1,326 @@
+﻿.semblanzas-tools {
+  padding: 0 3rem 1.25rem;
+  background: #111111;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(220px, 320px);
+  align-items: center;
+  gap: 1rem;
+}
+
+.semblanzas-search {
+  position: relative;
+  width: 100%;
+}
+
+.semblanzas-search i {
+  position: absolute;
+  top: 50%;
+  left: 22px;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 1.05rem;
+  transition: 0.25s;
+}
+
+.semblanzas-search input {
+  width: 100%;
+  height: 50px;
+  padding: 0 28px 0 58px;
+  border: none;
+  border-radius: 999px;
+  background: #ffffff;
+  font-size: 1rem;
+  color: #1f2937;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.25s;
+}
+
+.semblanzas-search input::placeholder {
+  color: #9ca3af;
+}
+
+.semblanzas-search input:focus {
+  outline: none;
+  box-shadow:
+    0 0 0 4px rgba(36, 92, 196, 0.15),
+    0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.semblanzas-search input:focus + i {
+  color: #245cc4;
+}
+
+.semblanzas-select {
+    position: relative;
+    width: 100%;
+    min-width: 210px;
+}
+
+.semblanzas-select__control {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 58px 0 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.96);
+    color: #172033;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    box-shadow:
+        0 10px 26px rgba(0, 0, 0, 0.16);
+
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.semblanzas-select__control:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(53, 88, 200, 0.45);
+
+    box-shadow:
+        0 15px 32px rgba(0, 0, 0, 0.2);
+}
+
+.semblanzas-select__control:focus {
+    outline: none;
+
+    border-color: #3558c8;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(53, 88, 200, 0.18),
+        0 15px 32px rgba(0, 0, 0, 0.18);
+}
+
+.semblanzas-select__icono {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: #3558c8;
+    color: #ffffff;
+
+    pointer-events: none;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.semblanzas-select:focus-within
+.semblanzas-select__icono {
+    transform:
+        translateY(-50%)
+        rotate(180deg);
+
+    background: #153b9d;
+}
+
+.semblanzas-select__control option {
+    background: #ffffff;
+    color: #172033;
+    font-size: 1rem;
+}
+
+.filtro-pais {
+    position: relative;
+    width: 100%;
+    min-width: 220px;
+    z-index: 40;
+}
+
+.filtro-pais__boton {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    padding: 0 14px 0 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.97);
+    color: #172033;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.filtro-pais__boton:hover,
+.filtro-pais.is-open .filtro-pais__boton {
+    transform: translateY(-2px);
+    border-color: #3558c8;
+
+    box-shadow:
+        0 0 0 4px rgba(53, 88, 200, 0.15),
+        0 15px 32px rgba(0, 0, 0, 0.2);
+}
+
+.filtro-pais__flecha {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #3558c8;
+    color: #ffffff;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.filtro-pais.is-open .filtro-pais__flecha {
+    transform: rotate(180deg);
+    background: #153b9d;
+}
+
+.filtro-pais__menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 100;
+
+    width: 100%;
+    max-height: 280px;
+    overflow-y: auto;
+
+    padding: 0.55rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+
+    background: rgba(17, 17, 17, 0.96);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.38);
+
+    animation: filtroPaisEntrada 0.2s ease;
+}
+
+.filtro-pais__opcion {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0.8rem 1rem;
+
+    border: 0;
+    border-radius: 12px;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.filtro-pais__opcion:hover {
+    transform: translateX(4px);
+
+    background: rgba(53, 88, 200, 0.22);
+    color: #8db8ff;
+}
+
+.filtro-pais__opcion.is-active {
+    background: #3558c8;
+    color: #ffffff;
+}
+
+.filtro-pais__menu::-webkit-scrollbar {
+    width: 7px;
+}
+
+.filtro-pais__menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.filtro-pais__menu::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.28);
+}
+
+@keyframes filtroPaisEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.semblanzas-bloque .semblanzas-header,
+.semblanzas-bloque .semblanzas-tools,
+.semblanzas-bloque .semblanzas-visor-section,
+.semblanzas-bloque .semblanza-visor,
+.semblanzas-bloque .semblanza-slide {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
