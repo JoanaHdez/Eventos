@@ -515,11 +515,16 @@ class InformativaController extends BaseController
                 'logo_congreso' => 'assets/eventos/plantillas/informativa/img/4/hero5.png',
                 'intro' => 'Tras una pausa en las actividades presenciales por la contingencia sanitaria, el Cuarto Congreso Internacional de Seguridad y Proximidad Social marcó el regreso triunfal de esta iniciativa global. Encabezado por la nueva administración local, el evento sirvió como foro de vanguardia para que mandatarios de diversas regiones de México y del mundo compartieran sus visiones sobre cómo optimizar la labor policial en un entorno de constante evolución social.',
 
-                'video_principal' => 'https://www.youtube.com/embed/M3chHQRiaXM?list=PLw2QxJGgsiAsKKGykmWj1n7USFd4YPK8o',
+                'video_principal' => 'https://www.youtube.com/embed/dxZlKe9s9X0?start=4',
 
-                'video_titulo' => 'Inauguración del 4º Congreso Internacional de Seguridad y Proximidad Social',
+                'video_titulo' => '4° Congreso Internacional de Seguridad y Proximidad Social',
 
-                'videos_secundarios' => [],
+                'videos_secundarios' => [
+                    [
+                        'titulo' => 'Inauguración del 4º Congreso Internacional de Seguridad y Proximidad Social',
+                        'url' => 'https://www.youtube.com/embed/M3chHQRiaXM?list=PLw2QxJGgsiAsKKGykmWj1n7USFd4YPK8o',
+                    ],
+                ],
 
                 'objetivo' => 'Sociabilizar, difundir y contrastar las buenas prácticas de diversas corporaciones policiales en el ámbito nacional e internacional. El enfoque principal radicó en analizar los retos actuales y desafíos operativos en la coordinación estratégica entre las policías locales (municipales) y las fuerzas de seguridad nacionales, buscando que el modelo de proximidad de Nezahualcóyotl sirva como base de réplica para otros territorios de la República Mexicana.',
 
@@ -685,6 +690,11 @@ class InformativaController extends BaseController
                 'video_titulo' => '5° Congreso Internacional de Seguridad y Proximidad Social.',
 
                 'videos_secundarios' => [
+                    [
+                        'titulo' => '5° Congreso Internacional de Seguridad y Proximidad Social',
+                        'url' => 'https://www.youtube.com/embed/Gjrq3MtgSiY?start=1864',
+                    ],
+
                     [
                         'titulo' => '5to Congreso Internacional de Seguridad y Proximidad Social',
                         'url' => 'https://www.youtube.com/embed/KNnZZcXHr2s',
