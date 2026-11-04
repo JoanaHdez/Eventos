@@ -122,7 +122,8 @@ class InformativaController extends BaseController
                     ],
                 ],
 
-                'programa_imagen' => '',
+                'programa_imagen' => 'assets/eventos/plantillas/informativa/img/1/programa.png',
+
                 'ponentes_imagen' => '',
 
                 'legado' => 'El Primer Congreso Internacional de Seguridad y Proximidad Social representó el origen de un ambicioso proyecto institucional. Con el paso de los años, este esfuerzo inicial logró consolidarse como un espacio permanente y referente para el intercambio de conocimientos, experiencias y buenas prácticas, enriquecido permanentemente por la participación de destacados especialistas de México y diversos países del mundo.',
@@ -302,7 +303,7 @@ class InformativaController extends BaseController
                     ],
                 ],
 
-                'programa_imagen' => '',
+                'programa_imagen' => 'assets/eventos/plantillas/informativa/img/2/programa.png',
                 'ponentes_imagen' => '',
 
                 'legado' => 'La segunda edición reafirmó que la proximidad no consiste únicamente en el diálogo con la comunidad, sino en una inmersión profunda en el ambiente vecinal respaldada por la investigación científica. Este congreso dejó claro que el verdadero éxito institucional radica en dejar de ver al policía tradicional como un símbolo de emergencia y comenzar a consolidarlo como un agente preventivo integrado en la vida diaria de la ciudadanía.',
@@ -466,7 +467,7 @@ class InformativaController extends BaseController
                     ],
                 ],
 
-                'programa_imagen' => '',
+                'programa_imagen' => 'assets/eventos/plantillas/informativa/img/3/programa.png',
                 'ponentes_imagen' => '',
 
                 'legado' => 'La tercera edición dejó un legado trascendental: posicionó formalmente el llamado nacional a no militarizar las estrategias de seguridad locales. Reafirmó que para frenar la violencia e inseguridad en el país es ineludible que las armas de las instituciones sean el trabajo policial comunitario y de proximidad vecinal, demostrando que las corporaciones municipales sólidas son el único mecanismo esencial para legitimar la autoridad y salvaguardar la paz.',
@@ -515,14 +516,18 @@ class InformativaController extends BaseController
                 'logo_congreso' => 'assets/eventos/plantillas/informativa/img/4/hero5.png',
                 'intro' => 'Tras una pausa en las actividades presenciales por la contingencia sanitaria, el Cuarto Congreso Internacional de Seguridad y Proximidad Social marcó el regreso triunfal de esta iniciativa global. Encabezado por la nueva administración local, el evento sirvió como foro de vanguardia para que mandatarios de diversas regiones de México y del mundo compartieran sus visiones sobre cómo optimizar la labor policial en un entorno de constante evolución social.',
 
-                'video_principal' => 'https://www.youtube.com/embed/dxZlKe9s9X0?start=4',
+                'video_principal' => 'https://www.youtube.com/embed/0H7ifPmHIgs',
 
-                'video_titulo' => '4° Congreso Internacional de Seguridad y Proximidad Social',
+                'video_titulo' => '4° Congreso Internacional de Seguridad y Proximidad Social - 1er Ciclo',
 
                 'videos_secundarios' => [
                     [
-                        'titulo' => 'Inauguración del 4º Congreso Internacional de Seguridad y Proximidad Social',
-                        'url' => 'https://www.youtube.com/embed/M3chHQRiaXM?list=PLw2QxJGgsiAsKKGykmWj1n7USFd4YPK8o',
+                        'titulo' => '4° Congreso Internacional de Seguridad y Proximidad Social - 2do Ciclo',
+                        'url' => 'https://www.youtube.com/embed/Vwfh63y1kj0',
+                    ],
+                    [
+                        'titulo' => '4° Congreso Internacional de Seguridad y Proximidad Social - 3er y 4to Ciclo',
+                        'url' => 'https://www.youtube.com/embed/RH0Wxlu6Nw0',
                     ],
                 ],
 
@@ -636,7 +641,7 @@ class InformativaController extends BaseController
                     ],
                 ],
 
-                'programa_imagen' => '',
+                'programa_imagen' => 'assets/eventos/plantillas/informativa/img/4/programa.png',
                 'ponentes_imagen' => '',
 
                 'legado' => 'El cuarto congreso dejó en claro que la seguridad ciudadana demanda una coordinación estrecha entre los tres niveles de gobierno por encima de cualquier ideología. Al ser respaldado por datos que colocaban al modelo de proximidad de Nezahualcóyotl como referente nacional de cercanía con la población, esta edición consolidó la premisa de que los municipios tienen la capacidad de dictar la agenda nacional de seguridad si construyen sus estrategias desde la base comunitaria.',
@@ -685,11 +690,16 @@ class InformativaController extends BaseController
                 'logo_congreso' => 'assets/eventos/plantillas/informativa/img/5/hero5.jpg',
                 'intro' => 'El Quinto Congreso Internacional de Seguridad y Proximidad Social consolidó de manera definitiva el renombre global de este encuentro, alcanzando una participación masiva de más de 4 mil asistentes tanto de forma presencial como remota. En un esfuerzo por innovar y democratizar el aprendizaje, esta edición implementó por primera vez dinámicas digitales de retroalimentación en tiempo real a través de redes sociales, enriqueciendo sustancialmente el debate de los congresistas.',
 
-                'video_principal' => 'https://www.youtube.com/embed/9RqzFlJXVO4',
+                'video_principal' => 'https://www.youtube.com/embed/Gjrq3MtgSiY?start=1864',
 
                 'video_titulo' => '5° Congreso Internacional de Seguridad y Proximidad Social.',
 
                 'videos_secundarios' => [
+                    [
+                        'titulo' => '5° Congreso Internacional de Seguridad y Proximidad Social',
+                        'url' => 'https://www.youtube.com/embed/9RqzFlJXVO4',
+                    ],
+
                     [
                         'titulo' => '5° Congreso Internacional de Seguridad y Proximidad Social',
                         'url' => 'https://www.youtube.com/embed/Gjrq3MtgSiY?start=1864',
@@ -798,7 +808,7 @@ class InformativaController extends BaseController
                     ],
                 ],
 
-                'programa_imagen' => '',
+                'programa_imagen' => 'assets/eventos/plantillas/informativa/img/5/programa.png',
                 'ponentes_imagen' => '',
 
                 'legado' => 'El quinto congreso dejó asentado que la proximidad social no es una fórmula estática, sino una estrategia viva que debe evolucionar año con año para no perder eficacia ante los cambios del entorno delictivo. Asimismo, legitimó que el conocimiento no fluye en un solo sentido: al integrar las voces ciudadanas mediante herramientas digitales, se consolidó un modelo de aprendizaje colaborativo que continúa transformando el diseño de las políticas públicas de seguridad en México.',
@@ -942,7 +952,7 @@ class InformativaController extends BaseController
                     ],
                 ],
 
-                'programa_imagen' => '',
+                'programa_imagen' => 'assets/eventos/plantillas/informativa/img/6/programa.png',
                 'ponentes_imagen' => '',
 
                 'legado' => 'La sexta edición dejó en claro que la tecnología y la digitalización no deben deshumanizar la labor policial, sino todo lo contrario: deben convertirse en el puente que agilice y asegure la confianza comunitaria. Al integrar herramientas inteligentes al modelo de proximidad, este congreso fijó la pauta para que las corporaciones locales de todo el país den el salto hacia una seguridad moderna, eficiente, predictiva y profundamente cercana a las familias.',
